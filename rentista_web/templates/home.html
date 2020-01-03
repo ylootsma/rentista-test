@@ -1,0 +1,5340 @@
+{% extends "_layout.html" %}
+
+{% block content %}
+
+
+<head>
+  <!-- <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
+  <style>
+    .slick-slider * {
+      outline: none;
+    }
+
+    .navbar-toggler {
+      width: 47px;
+      height: 34px;
+      background-color: transparent;
+      border: none;
+    }
+
+    .navbar-toggler .navbar-toggler-icon {
+      width: 100%;
+      float: left;
+      height: 2px;
+      background-color: rgba(214, 208, 169, 0.945);
+      margin-bottom: 5px;
+    }
+
+    #car_button1:hover {
+      background: black;
+    }
+
+    #car_button2:hover {
+      background: white;
+    }
+
+    #car_button3:hover {
+      background: white;
+    }
+
+    #car_button4:hover {
+      background: black;
+    }
+
+    @media (min-width: 1199px) {
+
+
+
+      .modal-content {
+        width: 50rem;
+      }
+    }
+
+    @media only screen and (min-width: 1024px) and (max-width: 1199px) {
+      .modal-content {
+        width: 40rem;
+      }
+    }
+
+
+    @media only screen and (min-width: 767px) and (max-width:1024px) {
+      .modal-content {
+        width: 37rem;
+      }
+    }
+
+
+    .register-photo .image-holder {
+      display: table-cell;
+      width: auto;
+      background: url('https://rentista.s3.us-east-2.amazonaws.com/naeim-jafari-laobUPA4jR8-unsplash.jpg');
+      background-size: cover;
+    }
+
+    .register-photo {
+      /* background: #f1f7fc;*/
+      padding: 80px 0;
+    }
+
+    .register-photo .form-container {
+      display: table;
+      max-width: 800px;
+      width: 100%;
+      margin: 0 auto;
+      box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    @media (min-width:767px) {
+      .register-photo form {
+        display: table-cell;
+        width: 60%;
+        background-color: #ffffff;
+        padding: 40px 60px;
+        color: #505e6c;
+        /*  display: flex;
+  flex-direction: column;*/
+      }
+    }
+
+    @media (max-width:991px) {
+      .register-photo form {
+        padding: 40px;
+      }
+    }
+
+    .register-photo form h2 {
+      font-size: 24px;
+      line-height: 1.5;
+      margin-bottom: 30px;
+    }
+
+    .register-photo form .form-control {
+      background: #f7f9fc;
+      border: none;
+      border-bottom: 1px solid #dfe7f1;
+      border-radius: 0;
+      box-shadow: none;
+      outline: none;
+      color: inherit;
+      text-indent: 6px;
+      height: 40px;
+      width: 100%;
+      margin: auto;
+
+    }
+
+    .register-photo form .form-check {
+      font-size: 13px;
+      line-height: 20px;
+    }
+
+    .register-photo form .btn-primary {
+      background: #f4476b;
+      border: none;
+      border-radius: 4px;
+      padding: 11px;
+      box-shadow: none;
+      margin-top: 15px;
+      text-shadow: none;
+      outline: none !important;
+      width: 40%;
+      margin-left: 20%;
+    }
+
+    .register-photo form .btn-primary:hover,
+    .register-photo form .btn-primary:active {
+      background: #eb3b60;
+    }
+
+    .register-photo form .btn-primary:active {
+      transform: translateY(1px);
+    }
+
+    .register-photo form .already {
+      display: block;
+      text-align: center;
+      font-size: 12px;
+      color: #6f7a85;
+      opacity: 0.9;
+      text-decoration: none;
+    }
+
+
+    body {
+      background-color: white;
+    }
+
+    .card {
+      background-color: rgb(253, 241, 237);
+    }
+
+    h2,
+    h3 {
+      font-weight: bold;
+      padding-top: 25px;
+      color: rgba(214, 208, 169, 0.945);
+    }
+
+    p {
+      color: #7d8285;
+      line-height: 1.5;
+      font-size: 16px;
+      max-width: 500px;
+
+    }
+
+    /* carousel_cover */
+
+    /* carousel_cover */
+
+    /* pricing */
+
+    .tab-pane .card-deck .card {
+
+      border-radius: 10px 10px 10px 10px;
+      -moz-border-radius: 10px 10px 10px 10px;
+      -webkit-border-radius: 10px 10px 10px 10px;
+      border: 1px;
+
+    }
+
+
+    .form-control {
+      background-color: rgb(253, 241, 237);
+      border-color: black;
+    }
+
+    #pills-home-tab {
+      background-color: rgb(253, 241, 237);
+      color: black;
+    }
+
+    #pills-profile-tab {
+      background-color: rgb(253, 241, 237);
+      color: black;
+    }
+
+
+    .nav-pills .nav-item .nav-link:not(.active) {
+      background-color: transparent !important;
+    }
+
+    @media only screen and (min-width:1200px) {
+
+      #plans2 {
+        display: none;
+      }
+
+
+
+      .tab-pane {
+
+        padding-top: 1rem;
+        padding-right: 5rem;
+        padding-left: 2rem;
+        position: relative;
+        padding-bottom: 1rem;
+
+      }
+
+
+      #standard_price1,
+      #standard_price2 {
+        /* padding-bottom: 2rem; */
+        margin-bottom: 2rem;
+      }
+
+      #premium_price1,
+      #premium_price2 {
+        /* padding-bottom: 2rem; */
+        margin-bottom: 2rem;
+      }
+
+      #pills-tabContent {
+        height: 35rem;
+        background: url(https://rentista.s3.us-east-2.amazonaws.com/iStock-507905570.jpg);
+        background-position: right top;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border: 1px solid black;
+
+      }
+
+      #pc1 {
+        display: initial;
+      }
+
+      #pc2 {
+        display: initial;
+      }
+
+      #nsa_s_select {
+        width: min-content;
+      }
+
+      #sts_s_select {
+        width: min-content;
+      }
+
+      #f_s_select {
+        width: min-content;
+      }
+
+      #nsa_p_select {
+        width: min-content;
+      }
+
+      #sts_p_select {
+        width: min-content;
+      }
+
+      #f_p_select {
+        width: min-content;
+      }
+
+
+      #nsa1,
+      #nsa2 {
+        display: none;
+      }
+
+    }
+
+    @media only screen and (min-width:1024px) and (max-width: 1199px) {
+
+
+      #standard_price1,
+      #standard_price2 {
+        /* padding-bottom: 2rem; */
+        margin-bottom: 1.5rem;
+      }
+
+      #premium_price1,
+      #premium_price2 {
+        /* padding-bottom: 2rem; */
+        margin-bottom: 1.5rem;
+      }
+
+      .tab-pane .card-deck .card {
+        height: 28rem;
+        width: 4rem;
+      }
+
+      #plans2 {
+        display: none;
+      }
+
+      #nsa1,
+      #nsa2 {
+        display: none;
+      }
+
+      .tab-pane {
+        padding-top: 0.5rem;
+        padding-right: 7rem;
+        padding-left: 3rem;
+        position: relative;
+
+
+
+      }
+
+      #pills-tabContent {
+        height: 35rem;
+        background: url(https://rentista.s3.us-east-2.amazonaws.com/iStock-507905570.jpg);
+        background-position: right top;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border: 1px solid black;
+
+      }
+
+
+
+
+      #pc1 {
+        display: initial;
+      }
+
+      #pc2 {
+        display: initial;
+      }
+
+      #nsa_s_select {
+        width: min-content;
+      }
+
+      #sts_s_select {
+        width: min-content;
+      }
+
+      #f_s_select {
+        width: min-content;
+      }
+
+      #nsa_p_select {
+        width: min-content;
+      }
+
+      #sts_p_select {
+        width: min-content;
+      }
+
+      #f_p_select {
+        width: min-content;
+      }
+
+    }
+
+    @media only screen and (min-width:992px) and (max-width: 1023px) {
+
+
+      #standard_price1,
+      #standard_price2 {
+        /* padding-bottom: 2rem; */
+        margin-bottom: 1.5rem;
+      }
+
+      #premium_price1,
+      #premium_price2 {
+        /* padding-bottom: 2rem; */
+        margin-bottom: 1.5rem;
+      }
+
+
+      /* #fixprice,
+      #fixprice2 {
+        display: none;
+      } */
+
+
+      .tab-pane {
+        padding-top: 0rem;
+        padding-right: 4rem;
+        padding-left: 4rem;
+        position: relative;
+
+
+
+      }
+
+      #pricing_plans,
+      #pricing_plans2 {
+        color: white;
+      }
+
+      #nsa1,
+      #nsa2 {
+        display: none;
+      }
+
+
+      #plans2 {
+        display: none;
+      }
+
+      #pc1 {
+        display: none;
+      }
+
+      #pc2 {
+        display: none;
+      }
+
+      #background_pricing_smallscreen {
+        background: url(https://rentista.s3.us-east-2.amazonaws.com/iStock-507905570.jpg);
+        background-position: right;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-right: 4rem;
+        margin-left: 4rem;
+        height: 10rem;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2rem;
+        justify-content: center;
+        border: 1px solid black;
+      }
+
+
+      #nsa_s_select {
+        width: min-content;
+      }
+
+      #sts_s_select {
+        width: min-content;
+      }
+
+      #f_s_select {
+        width: min-content;
+      }
+
+      #nsa_p_select {
+        width: min-content;
+      }
+
+      #sts_p_select {
+        width: min-content;
+      }
+
+      #f_p_select {
+        width: min-content;
+      }
+
+    }
+
+
+    @media only screen and (min-width:768px) and (max-width: 991px) {
+
+      #standard_price1,
+      #standard_price2 {
+
+        margin-bottom: 1rem;
+
+      }
+
+      #premium_price1,
+      #premium_price2 {
+
+        margin-bottom: 1rem;
+      }
+
+      #explore1,
+      #explore2 {
+        display: none;
+      }
+
+      #plans2 {
+        display: none;
+      }
+
+      #pc1 {
+        display: none;
+      }
+
+      #pc2 {
+        display: none;
+      }
+
+      #background_pricing_smallscreen {
+        background: url(https://rentista.s3.us-east-2.amazonaws.com/iStock-507905570.jpg);
+        background-position: right;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 10rem;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2rem;
+        justify-content: center;
+        border: 1px solid black;
+      }
+
+
+      #nsa_s_select {
+        width: min-content;
+      }
+
+      #sts_s_select {
+        width: min-content;
+      }
+
+      #f_s_select {
+        width: min-content;
+      }
+
+      #nsa_p_select {
+        width: min-content;
+      }
+
+      #sts_p_select {
+        width: min-content;
+      }
+
+      #f_p_select {
+        width: min-content;
+      }
+
+    }
+
+
+
+    @media only screen and (min-width:576px) and (max-width: 767px) {
+
+
+
+      #plans {
+        display: none;
+      }
+
+      #pc1 {
+        display: none;
+      }
+
+      #pc2 {
+        display: none;
+      }
+
+      .card-deck {
+
+        margin-left: 2.5rem;
+        margin-right: 2.5rem;
+      }
+
+      .card {
+        /* padding: 2rem; */
+        margin-top: 1rem;
+      }
+
+      /* #background_pricing_phone {
+        background: url(https://rentista.s3.us-east-2.amazonaws.com/fashion-model-in-pink.jpg);
+        height: 28rem;
+        background-position: top;
+        background-size: contain;
+        background-repeat: no-repeat;
+
+      } */
+
+      #nsa_s_select {
+        margin: 0rem;
+        padding: 0rem;
+        width: min-content;
+      }
+
+      #sts_s_select {
+        margin: 0rem;
+        padding: 0rem;
+        width: min-content;
+      }
+
+      #f_s_select {
+        margin: 0rem;
+        padding: 0rem;
+        width: min-content;
+      }
+
+      #nsa_p_select {
+        margin: 0rem;
+        padding: 0rem;
+        width: min-content;
+      }
+
+      #sts_p_select {
+        margin: 0rem;
+        padding: 0rem;
+        width: min-content;
+      }
+
+      #f_p_select {
+        margin: 0rem;
+        padding: 0rem;
+        width: min-content;
+      }
+    }
+
+    @media only screen and (max-width: 575px) {
+
+      #standard_price1,
+      #standard_price2 {
+
+        margin-bottom: 1rem;
+
+      }
+
+      #premium_price1,
+      #premium_price2 {
+
+        margin-bottom: 1rem;
+      }
+
+
+      #explore1,
+      #explore2 {
+        display: none;
+      }
+
+      #plans2 {
+        display: none;
+      }
+
+      .tab-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #pc1 {
+        display: none;
+      }
+
+      #pc2 {
+        display: none;
+      }
+
+      /* 
+      #background_pricing_phone {
+        background: url(https://rentista.s3.us-east-2.amazonaws.com/fashion-model-in-pink.jpg);
+        height: 28rem;
+        background-position: top;
+        background-size: contain;
+        background-repeat: no-repeat;
+
+      } */
+
+
+      #nsa_s_select {
+        width: min-content;
+
+      }
+
+      #sts_s_select {
+        width: min-content;
+      }
+
+      #f_s_select {
+        width: min-content;
+      }
+
+      #nsa_p_select {
+        width: min-content;
+      }
+
+      #sts_p_select {
+        width: min-content;
+      }
+
+      #f_p_select {
+        width: min-content;
+
+      }
+
+
+
+
+      .card-deck,
+      .card {
+        width: 20rem;
+        /* align-self: auto; */
+        margin: auto;
+      }
+
+    }
+
+
+    /* pricing */
+    /* slick-image slider */
+    #ipro {
+      display: none;
+    }
+
+    #computer {
+      display: flex;
+      position: relative;
+    }
+
+    #ipad {
+      display: none;
+    }
+
+    #phone {
+      display: none;
+    }
+
+    .for_slick_slider {
+
+      display: flex;
+      width: 70rem;
+      height: 30rem;
+
+    }
+
+    .for_slick_slider .items img {
+      height: 30rem;
+      width: 14rem;
+      object-fit: cover;
+    }
+
+    .arrow_prev {
+      position: absolute;
+      top: 50%;
+      left: -3%;
+    }
+
+    .arrow_next {
+      position: absolute;
+      top: 50%;
+      right: -1%;
+    }
+
+
+    @media only screen and (min-width:992px) and (max-width: 1023px) {
+
+      .items a {
+        position: absolute;
+        top: 90%;
+        text-align: center;
+        /* justify-content: center; */
+        /* align-content: center; */
+        /* margin: auto; */
+        /* padding-left: 2.5rem; */
+        margin-left: 4.5rem;
+        /* padding-bottom: 0rem; */
+        height: 2rem;
+        color: black;
+        background: white;
+        border: solid black;
+        width: 8rem;
+        /* padding-right: 3rem; */
+
+      }
+
+      #ipad {
+        display: none
+      }
+
+      #ipro {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+      }
+
+      #phone {
+        display: none;
+      }
+
+      #computer {
+        display: none;
+      }
+
+      .for_slick_slider .items img {
+        height: 20rem;
+        width: 13rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        object-fit: cover;
+      }
+
+      .for_slick_slider {
+
+        display: flex;
+        width: 50rem;
+
+        height: 20rem;
+        /* margin-left: 2rem; */
+        /* margin-right: 3rem; */
+        /* margin: 2rem;
+        padding: 1rem; */
+
+
+      }
+
+      .arrow_prev1 {
+        position: absolute;
+        top: 50%;
+        left: 9.5%;
+        /* left: 2%; */
+      }
+
+
+
+      .arrow_next1 {
+        position: absolute;
+        top: 50%;
+        right: 9%;
+        /* right: 2%; */
+
+      }
+    }
+
+    @media only screen and (min-width:768px) and (max-width: 991px) {
+
+
+      .items a {
+        position: absolute;
+        top: 80%;
+        text-align: center;
+        /* justify-content: center; */
+        /* align-content: center; */
+        /* margin: auto; */
+        /* padding-left: 2.5rem; */
+        margin-left: 6.5rem;
+        /* padding-bottom: 0rem; */
+        height: 2rem;
+        color: black;
+        background: white;
+        border: solid black;
+        width: 8rem;
+        /* padding-right: 3rem; */
+
+      }
+
+      #ipad {
+        position: relative;
+        display: flex;
+      }
+
+      #ipro {
+        display: none;
+      }
+
+      #phone {
+        display: none;
+      }
+
+      #computer {
+        display: none;
+      }
+
+      .for_slick_slider .items img {
+        height: 30rem;
+        width: 20rem;
+        margin-left: 0.5rem;
+        object-fit: cover;
+      }
+
+      .for_slick_slider {
+        margin: auto;
+        display: flex;
+        width: 42rem;
+
+        height: 30rem;
+        /* margin-left: 1rem; */
+        /* margin-right: 3rem; */
+        /* margin: 2rem;
+        padding: 1rem; */
+
+
+      }
+
+      .arrow_prev2 {
+        position: absolute;
+        top: 50%;
+        left: 0%;
+      }
+
+
+
+      .arrow_next2 {
+        position: absolute;
+        top: 50%;
+        right: 1.5%;
+      }
+    }
+
+
+
+
+    @media only screen and (min-width: 421px)and (max-width: 767px) {
+
+      .items a {
+        position: absolute;
+        top: 80%;
+        text-align: center;
+        /* justify-content: center; */
+        /* align-content: center; */
+        /* margin: auto; */
+        /* padding-left: 2.5rem; */
+        margin-left: 7rem;
+        /* padding-bottom: 0rem; */
+        height: 2rem;
+        color: black;
+        background: white;
+        border: solid black;
+        width: 8rem;
+        /* padding-right: 3rem; */
+
+      }
+
+      #ipro {
+        display: none
+      }
+
+      #phone {
+        position: relative;
+        display: flex;
+        justify-content: center;
+
+
+      }
+
+      #ipad {
+        display: none;
+      }
+
+      #computer {
+        display: none
+      }
+
+      .for_slick_slider .items img {
+        height: 35rem;
+        width: 22rem;
+        object-fit: cover;
+      }
+
+      .for_slick_slider {
+
+        display: flex;
+        width: 22rem;
+
+        height: 35rem;
+
+      }
+
+      .arrow_pre {
+        position: absolute;
+        top: 50%;
+        padding-right: 25rem;
+
+        /* left: 1%; */
+      }
+
+
+
+      .arrow_nex {
+        position: absolute;
+        top: 50%;
+        padding-left: 25rem;
+
+
+      }
+    }
+
+    @media only screen and (min-width: 321px)and (max-width: 421px) {
+
+      .items a {
+        position: absolute;
+        top: 80%;
+        text-align: center;
+        /* justify-content: center; */
+        /* align-content: center; */
+        /* margin: auto; */
+        /* padding-left: 2.5rem; */
+        margin-left: 4.5rem;
+        /* padding-bottom: 0rem; */
+        height: 2rem;
+        color: black;
+        background: white;
+        border: solid black;
+        width: 8rem;
+        /* padding-right: 3rem; */
+
+      }
+
+      #ipro {
+        display: none
+      }
+
+      #phone {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+      }
+
+      #ipad {
+        display: none;
+      }
+
+      #computer {
+        display: none
+      }
+
+      .for_slick_slider .items img {
+        height: 25rem;
+        width: 17rem;
+        object-fit: cover;
+      }
+
+      .for_slick_slider {
+        display: flex;
+        /* justify-content: center;
+        align-items: center; */
+        /* margin: auto; */
+        width: 17rem;
+        height: 25rem;
+        /* margin: 2rem; */
+      }
+
+      .arrow_pre {
+        position: absolute;
+        top: 50%;
+        padding-right: 19rem;
+
+        /* left: 1%; */
+      }
+
+
+
+      .arrow_nex {
+        position: absolute;
+        top: 50%;
+        padding-left: 19rem;
+
+
+      }
+
+    }
+
+    @media only screen and (max-width: 321px) {
+
+
+      .items a {
+        position: absolute;
+        top: 80%;
+        text-align: center;
+        /* justify-content: center; */
+        /* align-content: center; */
+        /* margin: auto; */
+        /* padding-left: 2.5rem; */
+        margin-left: 4.5rem;
+        /* padding-bottom: 0rem; */
+        height: 2rem;
+        color: black;
+        background: white;
+        border: solid black;
+        width: 8rem;
+        /* padding-right: 3rem; */
+
+      }
+
+      #ipro {
+        display: none
+      }
+
+      #phone {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        margin-left: 0.5rem;
+      }
+
+      #ipad {
+        display: none;
+      }
+
+      #computer {
+        display: none
+      }
+
+      .for_slick_slider .items img {
+        height: 25rem;
+        width: 17rem;
+        margin: auto;
+        object-fit: cover;
+      }
+
+      .for_slick_slider {
+        /* display: flex; */
+        /* justify-content: center;
+        align-items: center; */
+        /* margin: auto; */
+        width: 17rem;
+        height: 25rem;
+        /* margin: 2rem; */
+      }
+
+      .arrow_pre {
+        position: absolute;
+        top: 50%;
+        right: 95%;
+
+        /* left: 1%; */
+      }
+
+
+
+      .arrow_nex {
+        position: absolute;
+        top: 50%;
+        left: 95%;
+
+
+      }
+
+    }
+
+
+
+
+
+    @media only screen and (min-width: 1200px) {
+
+
+      .items a {
+        position: absolute;
+        top: 80%;
+        text-align: center;
+        /* justify-content: center; */
+        /* align-content: center; */
+        /* margin: auto; */
+        /* padding-left: 2.5rem; */
+        margin-left: 3rem;
+        /* padding-bottom: 0rem; */
+        height: 2rem;
+        color: black;
+        background: white;
+        border: solid black;
+        width: 8rem;
+        /* padding-right: 3rem; */
+
+      }
+
+
+
+      #ipro {
+        display: none;
+      }
+
+      #computer {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+      }
+
+      #ipad {
+        display: none
+      }
+
+      #phone {
+        display: none
+      }
+
+      .for_slick_slider {
+
+        display: flex;
+        width: 70rem;
+
+        height: 30rem;
+        /* justify-content: center; */
+        /* align-items: center; */
+        /* margin: auto; */
+        margin-left: 2rem;
+
+      }
+
+
+
+      .for_slick_slider .items img {
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+        height: 30rem;
+        width: 14rem;
+        margin-right: 0.5rem;
+        margin-left: 0.5rem;
+        object-fit: cover;
+      }
+
+      .arrow_prev {
+        position: absolute;
+        top: 50%;
+        left: 0%;
+      }
+
+
+
+      .arrow_next {
+        position: absolute;
+        top: 50%;
+        right: 1%;
+      }
+    }
+
+
+    @media only screen and (min-width:1024px) and (max-width: 1199px) {
+
+
+      #ipad {
+        display: none
+      }
+
+      #computer {
+        display: none;
+
+      }
+
+      #phone {
+        display: none
+      }
+
+      #ipro {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+      }
+
+      .for_slick_slider {
+
+        display: flex;
+        width: 50rem;
+
+        height: 25rem;
+
+      }
+
+      .for_slick_slider .items img {
+        height: 25rem;
+        width: 15rem;
+        margin-left: 0.5rem;
+        object-fit: cover;
+        /* margin-right: 0.5rem; */
+
+      }
+
+      .arrow_prev1 {
+        position: absolute;
+        top: 50%;
+        left: 7%;
+      }
+
+
+
+      .arrow_next1 {
+        position: absolute;
+        top: 50%;
+        right: 8%;
+      }
+    }
+
+
+
+
+    /* slick-image slider */
+
+    /* how it works */
+
+    .features-boxed {
+      color: #313437;
+      /* background-color: rgb(253, 241, 237); */
+    }
+
+    .features-boxed p {
+      color: #7d8285;
+    }
+
+    .features-boxed h2 {
+      font-weight: bold;
+      /* margin-bottom: 25px; */
+      padding-top: 25px;
+
+    }
+
+    @media (max-width:767px) {
+      .features-boxed h2 {
+        margin-bottom: 25px;
+        padding-top: 25px;
+        font-size: 24px;
+      }
+    }
+
+    .features-boxed .intro {
+      font-size: 16px;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .features-boxed .intro p {
+      margin-bottom: 0;
+    }
+
+    .features-boxed .features {
+      padding: 10px 0;
+      margin-bottom: 0rem;
+      /* border: 1px solid black; */
+    }
+
+    .features-boxed .item .box {
+      border: 1px solid black;
+    }
+
+    @media only screen and (max-width: 300px) {
+
+
+
+      .features-boxed .features {
+        padding: 10px 20px;
+        margin-bottom: 0rem;
+        background-color: white;
+        /* width: 100%; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .features-boxed .item {
+        /* display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; */
+        width: 100%;
+        background-color: white;
+      }
+
+      .features-boxed .item .box {
+        /* text-align: center; */
+        padding: 10px;
+        /* background-color: rgb(253, 241, 237); */
+        /* margin-bottom: 3rem;
+        margin-top: 1rem; */
+        /* height: 40rem; */
+
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+
+      }
+    }
+
+    @media only screen and (min-width: 301px) and (max-width: 393px) {
+      .features-boxed .features {
+        padding: 10px 20px;
+        margin-bottom: 0rem;
+        /* background-color: white; */
+        /* width: 100%; */
+        display: flex;
+        /* flex-direction: column; */
+        align-items: center;
+        justify-content: center;
+      }
+
+      .features-boxed .item {
+        /* text-align: center; */
+        /* display: flex; */
+        width: 50%;
+        /* display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around; */
+      }
+
+      .features-boxed .item .box {
+        /* text-align: center; */
+        padding: 10px;
+        background-color: rgb(253, 241, 237);
+        margin-bottom: 3rem;
+        margin-top: 1rem;
+        height: 16rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        /* width: 100%; */
+
+      }
+    }
+
+    @media only screen and (min-width: 393px) and (max-width: 412px) {
+
+      .features-boxed .features {
+        padding: 10px 20px;
+        margin-bottom: 0rem;
+        /* background-color: white; */
+        /* width: 100%; */
+        display: flex;
+        /* flex-direction: column; */
+        align-items: center;
+        justify-content: center;
+      }
+
+      .features-boxed .item {
+        /* text-align: center; */
+        /* display: flex; */
+        width: 40%;
+      }
+
+      .features-boxed .item .box {
+        /* text-align: center; */
+        /* padding: 30px; */
+        background-color: rgb(253, 241, 237);
+        /* margin-bottom: 3rem; */
+        padding-top: 0.5rem;
+        margin-bottom: 1rem;
+        height: 15rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        /* width: 100%; */
+
+      }
+    }
+
+    @media only screen and (min-width: 413px) and (max-width: 512px) {
+
+      .features-boxed .features {
+        padding: 10px 20px;
+        margin-bottom: 0rem;
+        /* background-color: white; */
+        /* width: 100%; */
+        display: flex;
+        /* flex-direction: column; */
+        align-items: center;
+        justify-content: center;
+      }
+
+      .features-boxed .item {
+        /* text-align: center; */
+        /* display: flex; */
+        width: 40%;
+      }
+
+      .features-boxed .item .box {
+        /* text-align: center; */
+        /* padding: 30px; */
+        background-color: rgb(253, 241, 237);
+        /* margin-bottom: 3rem; */
+        padding-top: 0.5rem;
+        margin-bottom: 1rem;
+        height: 14rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        /* width: 100%; */
+      }
+    }
+
+    @media only screen and (min-width: 513px) and (max-width: 575px) {
+      .features-boxed .features {
+        padding: 10px 20px;
+        margin-bottom: 0rem;
+        /* background-color: white; */
+        /* width: 100%; */
+        display: flex;
+        /* flex-direction: column; */
+        align-items: center;
+        justify-content: center;
+      }
+
+      .features-boxed .item {
+        /* text-align: center; */
+        /* display: flex; */
+        width: 40%;
+      }
+
+      .features-boxed .item .box {
+        /* text-align: center; */
+        /* padding: 30px; */
+        background-color: rgb(253, 241, 237);
+        /* margin-bottom: 3rem; */
+        padding-top: 0.5rem;
+        margin-bottom: 1rem;
+        height: 11.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        /* width: 100%; */
+      }
+
+    }
+
+
+    @media only screen and (min-width: 576px) and (max-width: 767px) {
+      .features-boxed .features {
+        padding: 10px 20px;
+        margin-bottom: 0rem;
+
+      }
+
+      .features-boxed .item {
+        /* text-align: center; */
+        /* display: flex; */
+        width: 40%;
+      }
+
+      .features-boxed .item .box {
+        /* text-align: center; */
+        /* padding: 30px; */
+        background-color: rgb(253, 241, 237);
+        /* margin-bottom: 3rem; */
+        padding-top: 0.5rem;
+        margin-bottom: 1rem;
+        height: 13rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+      }
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      .features-boxed .features {
+        padding: 10px 20px;
+
+      }
+
+      .features-boxed .item {
+        /* text-align: center; */
+        /* display: flex; */
+        width: 30%;
+      }
+
+      .features-boxed .item .box {
+        /* text-align: center; */
+        /* padding: 30px; */
+        background-color: rgb(253, 241, 237);
+        /* margin-bottom: 3rem; */
+        padding-top: 0.5rem;
+        margin-bottom: 1rem;
+        height: 10rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        /* width: 100%; */
+      }
+
+    }
+
+    @media only screen and (min-width: 992px) {
+      .features-boxed .features {
+        padding: 10px 20px;
+
+      }
+
+      .features-boxed .item {
+        /* text-align: center; */
+        display: flex;
+        width: 40%;
+      }
+
+      .features-boxed .item .box {
+        /* text-align: center; */
+        /* padding: 30px; */
+        background-color: rgb(253, 241, 237);
+        padding-top: 0.5rem;
+        margin-bottom: 1rem;
+        /* margin-top: 1rem; */
+        height: 13rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        /* width: 100%; */
+
+      }
+    }
+
+
+    .features-boxed .item .box .card-img-top {
+      /* margin-top: 30px; */
+      /* margin-left: 60px; */
+      height: 3rem;
+      width: 2rem;
+      /* align-self: center; */
+    }
+
+    .features-boxed .item .name {
+      /* text-align: center; */
+      font-weight: bold;
+      font-size: 18px;
+      margin-bottom: 8px;
+      padding-top: 0.5rem;
+      color: inherit;
+    }
+
+    .features-boxed .item .description {
+      font-size: 15px;
+      margin: auto;
+      text-align: center;
+      /* margin-top: 15px; */
+      /* margin-left: 10px */
+      /* margin-bottom: 20px; */
+    }
+
+    /* how it works */
+
+    /* newsletter-subscribe */
+
+    .newsletter-subscribe {
+      color: white padding: 50px 0;
+    }
+
+    .newsletter-subscribe .intro {
+      font-size: 16px;
+      justify-content: center;
+      align-content: center;
+      /* margin: auto; */
+    }
+
+    .newsletter-subscribe .intro p {
+      align-self: center;
+      margin: auto;
+    }
+
+    .newsletter-subscribe form {
+      justify-content: center;
+    }
+
+    .newsletter-subscribe form .form-control {
+      background: #eff1f4;
+      border: none;
+      border-radius: 3px;
+      box-shadow: none;
+      outline: none;
+      color: inherit;
+      text-indent: 9px;
+      height: 45px;
+      /* margin-right: 10px; */
+      min-width: 250px;
+    }
+
+    .newsletter-subscribe form .btn {
+      color: white;
+      padding: 16px 32px;
+      border: none;
+      background: #f4476b;
+      box-shadow: none;
+      text-shadow: none;
+      opacity: 0.9;
+      text-transform: uppercase;
+      /* font-weight: bold; */
+      font-size: 13px;
+      letter-spacing: 0.4px;
+      line-height: 1;
+    }
+
+    .newsletter-subscribe form .btn:hover {
+      opacity: 1;
+    }
+
+    .newsletter-subscribe form .btn:active {
+      transform: translateY(1px);
+    }
+
+    .newsletter-subscribe form .btn-primary {
+      /* background-color: #055ada !important; */
+      color: #fff;
+      outline: none !important;
+    }
+
+    /* newsletter-subscribe */
+
+    /* footer */
+    @media only screen and (min-width: 1024px) {
+      #touch {
+        padding-bottom: 2rem;
+        padding-top: 3rem;
+      }
+
+      .newsletter-subscribe form .form-control {
+        background: white;
+        border: none;
+        border-radius: 3px;
+        box-shadow: none;
+        outline: none;
+        color: inherit;
+        text-indent: 9px;
+        height: 45px;
+        margin-right: 10px;
+        min-width: 250px;
+      }
+
+      #foot_background {
+        background-color: rgb(253, 245, 242);
+      }
+
+      .newsletter-subscribe h3 {
+        display: none;
+        padding-bottom: 2rem;
+      }
+
+      .newsletter-subscribe .intro p {
+        margin-bottom: 0px;
+      }
+
+      .newsletter-subscribe {
+        color: #313437;
+        /* padding-right: 3.5rem; */
+      }
+
+      #foot {
+        padding: 2rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        background: rgb(253, 245, 242);
+        /* align-items: center; */
+      }
+
+      .footer-basic h3 {
+        /* padding-bottom: 3.5rem; */
+      }
+
+      .footer-basic {
+        /* padding-left: 4rem; */
+        color: #4b4c4d;
+        background-color: rgb(253, 245, 242);
+        /* border-top: 1px solid black; */
+        /* border-left: 2px solid black; */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+      }
+    }
+
+    .footer-basic {
+      /* padding: 20px 0; */
+      color: #4b4c4d;
+      /* background-color: white; */
+      /* border-top: 1px solid black; */
+
+    }
+
+    .footer-basic ul {
+      padding: 0;
+      list-style: none;
+      text-align: center;
+      font-size: 15px;
+      line-height: 1.6;
+      margin-bottom: 0;
+    }
+
+    .footer-basic li {
+      padding: 0 10px;
+    }
+
+    .footer-basic ul a {
+      color: inherit;
+      text-decoration: none;
+      opacity: 0.8;
+    }
+
+    .footer-basic ul a:hover {
+      opacity: 1;
+    }
+
+    .footer-basic .social {
+      text-align: center;
+      padding-bottom: 1rem;
+    }
+
+    .footer-basic .social>a {
+      font-size: 24px;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      display: inline-block;
+      text-align: center;
+      /* border-radius: 50%;
+      border: 1px solid #ccc; */
+      margin: 0 8px;
+      color: inherit;
+      opacity: 0.75;
+    }
+
+    .footer-basic .social>a:hover {
+      opacity: 0.9;
+    }
+
+    .footer-basic .copyright {
+      margin-top: 15px;
+      text-align: center;
+      font-size: 13px;
+      color: #aaa;
+      margin-bottom: 0;
+    }
+
+    /* footer */
+
+    /* 
+   benefits card */
+
+    /* navbar */
+
+    @media only screen and (min-width: 1000px) {
+      .navbar-brand {
+        margin-left: 10rem;
+      }
+
+
+    }
+
+    /* 
+    @media only screen and (min-width: 1200px) { */
+
+    /* 
+   benefits card */
+    /* #include_card {
+        border: 1px solid black;
+        /* left: 20%;
+        right: 20%; */
+    /* width: 30rem; */
+
+
+    /* 
+      #include_card.h3 {
+        font-weight: bold;
+        padding-top: 25px;
+        color: rgba(214, 208, 169, 0.945);
+      } */
+    /* 
+      #include_card .row {
+        background-color: white;
+        padding-top: 0rem;
+        margin-top: 0rem;
+      } */
+
+    /* #include_card_image {}
+
+      #include_image {
+        padding-top: 0rem;
+        margin-top: 0rem;
+        width: 17rem;
+      }
+
+      #include_card_text {
+        width: 16rem;
+      } */
+    /* 
+      #include_card_text .card-body {
+        background-color: rgb(253, 241, 237); */
+    /* height: 30rem; */
+    /* display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 12rem;
+        height: 30rem; */
+    /* margin-left: 7rem; */
+    /* }
+
+      #include_card_text .card-body span {
+        display: inline-flex;
+
+      }
+
+      #include_card_text .card-body span img {
+        width: 3rem;
+        height: 2rem;
+        padding-right: 1rem; */
+    /* background-color: rgba(250, 249, 243, 0.945); */
+    /* }
+
+      #include_card_text .card-body .span .p {}
+
+    } */
+
+
+    /* navbar */
+
+    .bg-dark {
+      background: transparent !important;
+      transition: 750ms ease;
+    }
+
+    .bg-dark.scrolled {
+      background: white !important;
+    }
+
+    /* nav_new {
+      background: white !important;
+    } */
+
+    /* navbar */
+    /* @media only screen and (min-width: 576px) and (max-width: 600px) {
+      #include_card {
+        background-color: white;
+        border: none; */
+    /* left: 20%;
+        right: 20%; */
+    /* 
+      }
+
+      #include_card_text .card-body { */
+    /* background-color: rgb(253, 241, 237); */
+    /* margin-left: 15%;
+        height: 28.7rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+      }
+
+      #include_card_text .card-body span {
+        display: inline-flex;
+
+      }
+
+      #include_card_text .card-body span img {
+        width: 3rem;
+        height: 2rem;
+        padding-right: 1rem; */
+    /* background-color: rgb(253, 241, 237); */
+    /* }
+
+      #include_card.h3 {
+        font-weight: bold;
+        padding-top: 25px;
+        color: rgba(214, 208, 169, 0.945)
+      }
+
+      #include_card_image {
+        height: 30rem;
+      }
+
+      #include_image {
+        height: 30rem;
+        padding-top: 0rem;
+        margin-top: 0rem;
+      }
+    } */
+
+    @media only screen and (max-width: 339px) {
+
+
+      #car_hr3,
+      #car_hr4 {
+        width: 10rem;
+        background-color: white;
+      }
+
+      #car1 {
+        display: none;
+      }
+
+      #car_button5:hover {
+        background: black;
+      }
+
+      #car_button6:hover {
+        background: black;
+      }
+
+      #car_button7:hover {
+        background: black;
+      }
+
+      #car_button8:hover {
+        background: black;
+      }
+
+      #item1 .carousel-caption {
+        font-weight: bold;
+        /* color: rgba(214, 208, 169, 0.945); */
+        top: 33%;
+      }
+
+      #item2 .carousel-caption {
+        font-weight: bold;
+        /* color: rgba(214, 208, 169, 0.945); */
+        top: 38%;
+      }
+
+      #item1 img {
+        object-fit: cover;
+        width: 100%;
+        height: 36rem;
+        object-position: top;
+      }
+
+      #item2div {
+        bottom: 200px;
+        right: 50%
+      }
+
+      #item2 img {
+        object-fit: cover;
+        width: 100%;
+        height: 36rem;
+        object-position: top;
+      }
+
+
+      /* #include_card {
+        background-color: white;
+        border: none; */
+      /* left: 20%;
+        right: 20%; */
+
+      /* }
+
+      #include_card_text .card-body { */
+      /* background-color: rgb(253, 241, 237); */
+      /* height: 28.7rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+      }
+
+      #include_card_text .card-body span {
+        display: inline-flex;
+
+      }
+
+      #include_card_text .card-body span img {
+        width: 3rem;
+        height: 2rem; */
+      /* padding-right: 1rem; */
+      /* background-color: rgb(253, 241, 237); */
+      /* }
+
+      #include_card.h3 {
+        font-weight: bold;
+        padding-top: 25px;
+        color: rgba(214, 208, 169, 0.945)
+      }
+
+      #include_card_image {
+        height: 30rem;
+      }
+
+      #include_image {
+        height: 30rem;
+        padding-top: 0rem;
+        margin-top: 0rem;
+      } */
+
+    }
+
+
+
+    @media only screen and (min-width: 340px) and (max-width: 600px) {
+
+      #car_hr3,
+      #car_hr4 {
+        width: 10rem;
+        background-color: white;
+      }
+
+      #car1 {
+        display: none;
+      }
+
+      #car_button5:hover {
+        background: black;
+      }
+
+      #car_button6:hover {
+        background: black;
+      }
+
+      #car_button7:hover {
+        background: black;
+      }
+
+      #car_button8:hover {
+        background: black;
+      }
+
+      #item1 .carousel-caption {
+        font-weight: bold;
+        /* color: rgba(214, 208, 169, 0.945); */
+        top: 40%;
+      }
+
+      #item2 .carousel-caption {
+        font-weight: bold;
+        /* color: rgba(214, 208, 169, 0.945); */
+        top: 40%;
+      }
+
+      #item1 img {
+        object-fit: cover;
+        width: 100%;
+        height: 40rem;
+        object-position: top;
+      }
+
+      #item2div {
+        bottom: 200px;
+        right: 50%
+      }
+
+      #item2 img {
+        object-fit: cover;
+        width: 100%;
+        height: 40rem;
+        object-position: top;
+      }
+
+
+      /* #include_card {
+        background-color: white;
+        border: none;
+        /* left: 20%;
+        right: 20%; */
+
+      /* } */
+      /* 
+      #include_card_text .card-body { */
+      /* background-color: rgb(253, 241, 237); */
+      /* height: 28.7rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+      }
+
+      #include_card_text .card-body span {
+        display: inline-flex;
+
+      }
+
+      #include_card_text .card-body span img {
+        width: 3rem;
+        height: 2rem;
+        padding-right: 1rem; */
+      /* background-color: rgb(253, 241, 237); */
+      /* }
+
+      #include_card.h3 {
+        font-weight: bold;
+        padding-top: 25px;
+        color: rgba(214, 208, 169, 0.945)
+      }
+
+      #include_card_image {
+        height: 30rem;
+      } */
+
+      /* #include_image {
+        height: 30rem;
+        padding-top: 0rem;
+        margin-top: 0rem;
+      } */
+
+    }
+
+    /* carousel */
+
+    /* benefits section second part */
+    /* 
+     
+
+      #include_card {
+        border: none;
+        margin-right: 0%;
+        margin-left: 0%;
+
+      }
+
+  
+
+      #include_card .row {
+        background-color: rgba(250, 249, 243, 0.945);
+        padding-top: 0rem;
+        margin-top: 0rem;
+      }
+
+      #include_card_image {
+        height: 30rem;
+      }
+
+      #include_image {
+        height: 30rem;
+        padding-top: 0rem;
+        margin-top: 0rem;
+      }
+
+      #include_card_text {}
+
+      #include_card_text .card-body {
+        background-color: rgb(248, 228, 220);
+        height: 28.7rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 1.7rem;
+        margin-right: 1.7rem;
+
+      }
+
+      #include_card_text .card-body span {
+        display: inline-flex;
+
+      }
+
+      #include_card_text .card-body span img {
+        width: 3rem;
+        height: 2rem;
+        padding-right: 1rem;
+        background-color: rgb(248, 228, 220);
+        margin-left: 15%;
+      }
+
+      #include_card_text .card-body .span .p {}
+    } */
+
+
+    @media only screen and (min-width: 601px) and (max-width:700px) {
+
+      #car_hr3,
+      #car_hr4 {
+        width: 15rem;
+        background-color: white;
+      }
+
+      #car1 {
+        display: none;
+      }
+
+      #car_button5:hover {
+        background: black;
+      }
+
+      #car_button6:hover {
+        background: black;
+      }
+
+      #car_button7:hover {
+        background: black;
+      }
+
+      #car_button8:hover {
+        background: black;
+      }
+
+      #item1 .carousel-caption {
+        font-weight: bold;
+        /* color: rgba(214, 208, 169, 0.945); */
+        top: 50%;
+      }
+
+      #item2 .carousel-caption {
+        font-weight: bold;
+        /* color: rgba(214, 208, 169, 0.945); */
+        top: 40%;
+      }
+
+      #item1 img {
+        object-fit: cover;
+        width: 100%;
+        height: 40rem;
+        object-position: top;
+      }
+
+      #item2div {
+        bottom: 200px;
+        right: 50%;
+      }
+
+      #item2 img {
+        object-fit: cover;
+        width: 100%;
+        height: 40rem;
+        object-position: top;
+      }
+
+    }
+
+
+    @media only screen and (min-width: 701px) and (max-width:1023px) {
+
+      #buttons3,
+      #buttons4 {
+        margin: auto
+      }
+
+      #car_hr3,
+      #car_hr4 {
+        width: 15rem;
+        background-color: white;
+      }
+
+      #car1 {
+        display: none;
+      }
+
+      #car_button5:hover {
+        background: black;
+      }
+
+      #car_button6:hover {
+        background: black;
+      }
+
+      #car_button7:hover {
+        background: black;
+      }
+
+      #car_button8:hover {
+        background: black;
+      }
+
+      #item1 .carousel-caption {
+        font-weight: bold;
+        /* color: rgba(214, 208, 169, 0.945); */
+        top: 50%;
+
+        /* justify-content: center; */
+      }
+
+      #item2 .carousel-caption {
+        font-weight: bold;
+        /* color: rgba(214, 208, 169, 0.945); */
+        top: 50%;
+
+        /* justify-content: center; */
+      }
+
+      #item1 img {
+        object-fit: cover;
+        width: 100%;
+        height: 40rem;
+        object-position: top;
+      }
+
+      /* #item2div {
+        bottom: 200px;
+        right: 50%
+      } */
+
+      #item2 img {
+        object-fit: cover;
+        width: 100%;
+        height: 40rem;
+        object-position: top;
+      }
+    }
+
+    /* 
+    @media only screen and (min-width: 601px) and (max-width: 700px) {
+      #include { */
+    /* width: 100%; */
+    /* margin-left: 0px;
+      }
+
+      #include_card {
+        border: none;
+        margin-right: 0%;
+        margin-left: 0%;
+
+      }
+
+      #include_card.h3 {
+        font-weight: bold;
+        padding-top: 25px;
+        color: rgba(214, 208, 169, 0.945)
+      }
+
+      #include_card .row {
+        background-color: white;
+        padding-top: 0rem;
+        margin-top: 0rem;
+      }
+
+      #include_card_image {
+        height: 100%;
+      }
+
+      #include_image {
+        height: 30rem;
+        padding-top: 0rem;
+        margin-top: 0rem;
+      }
+
+
+
+      #include_card_text .card-body {
+        margin-left: 5%;
+        background-color: white;
+        height: 28.7rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+      }
+
+      #include_card_text .card-body span {
+        display: inline-flex;
+
+      }
+
+      #include_card_text .card-body span img {
+        width: 3rem;
+        height: 2rem;
+        padding-right: 1rem; */
+    /* background-color: rgb(253, 241, 237); */
+    /* margin-left: 15%;
+      }
+
+      #include_card_text .card-body .span .p {}
+    }
+
+    @media only screen and (min-width: 701px) and (max-width: 764px) {
+      #include { */
+    /* width: 100%; */
+    /* margin-left: 10%; */
+    /* }
+
+      #include_card {
+        border: none; */
+    /* margin-right: 15%; */
+    /* margin-left: 0rem;
+        background-color: white;
+
+      }
+
+      #include_card.h3 {
+        font-weight: bold;
+        padding-top: 25px;
+        color: rgba(214, 208, 169, 0.945)
+      }
+
+      #include_card .row {
+        background-color: white;
+        padding-top: 0rem;
+        margin-top: 0rem;
+      }
+
+      #include_card_image { */
+    /* margin-left: 5%; */
+    /* height: 100%; */
+    /* width: 50%; */
+    /* } */
+
+    /* #include_image {
+        height: 28.7rem;
+        padding-top: 0rem;
+        margin-top: 0rem;
+      }
+
+      #include_card_text {}
+
+      #include_card_text .card-body {
+        margin-right: 20%;
+        width: 70%;
+        float: right;
+
+        height: 28.7rem;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+      }
+
+      #include_card_text .card-body span {
+        display: inline-flex;
+
+      } */
+
+    /* #include_card_text .card-body span img {
+        width: 3rem;
+        height: 2rem;
+        padding-right: 1rem; */
+    /* background-color: rgb(253, 241, 237); */
+    /* margin-left: 15%;
+      } */
+    /* 
+      #include_card_text .card-body .span .p {}
+    }
+
+    @media only screen and (min-width: 765px) and (max-width: 767px) {
+
+      #include {
+        width: 100%;
+        margin-right: 10%;
+      }
+
+      #include_card {
+        border: none;
+        margin-right: 0%;
+        margin-left: 10%;
+        background-color: white;
+
+      }
+
+
+      #include_card_text .card-body span img {
+        width: 3rem;
+        height: 2rem;
+        padding-right: 1rem;
+        /* background-color: rgb(253, 241, 237); */
+    /* margin-left: 15%;
+    } */
+    /* 
+    #include_card_text .card-body {
+      width: 25rem; */
+    /* background-color: rgb(253, 241, 237); */
+    /* height: 26.7rem; */
+    /* margin-left: 55%; */
+    /* 
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+    } */
+
+    /* #include_card.h3 {
+      font-weight: bold;
+      padding-top: 25px;
+      color: rgba(214, 208, 169, 0.945)
+    }
+
+    #include_card .row {
+      background-color: white;
+      padding-top: 0rem;
+      margin-top: 0rem;
+    }
+
+    .card-img {
+      height: 26.7rem;
+      width: 25rem;
+    }
+
+    #include_image {
+      padding-top: 0rem;
+      margin-top: 0rem;
+    }
+
+
+    #include_card_text .card-body span {
+      display: inline-flex;
+
+    }
+
+    } */
+
+
+    /* 
+    @media only screen and (min-width: 768px) and (max-width: 990px) { */
+    /* #include {
+        width: 100%;
+        margin-right: 10%;
+      }
+
+      #include_card {
+        border: none;
+        margin-right: 0%;
+        margin-left: 0%;
+
+      }
+
+      #include_card.h3 {
+        font-weight: bold;
+        padding-top: 25px;
+        color: rgba(214, 208, 169, 0.945)
+      }
+
+      #include_card .row {
+        background-color: white;
+        padding-top: 0rem;
+        margin-top: 0rem;
+      } */
+
+    /* .card-img {
+        height: 26.7rem;
+        width: 25rem;
+      } */
+    /* 
+      #include_image {
+        padding-top: 0rem;
+        margin-top: 0rem;
+      }
+
+      #include_card_text {}
+
+      #include_card_text .card-body {
+        width: 25rem;
+        background-color: rgb(253, 241, 237);
+        height: 26.7rem;
+        margin-left: 55%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+      }
+
+      #include_card_text .card-body span {
+        display: inline-flex;
+
+      }
+
+      #include_card_text .card-body span img {
+        width: 3rem;
+        height: 2rem;
+        padding-right: 1rem;
+        background-color: rgb(253, 241, 237);
+        margin-left: 15%;
+      }
+
+      #include_card_text .card-body .span .p {} */
+    /* }
+
+    @media only screen and (min-width: 991px) and (max-width: 1023px) { */
+    /* #include {
+        width: 100%;
+        margin-right: 5%;
+      }
+
+      #include_card {
+        border: none;
+        margin-right: 0%;
+        margin-left: 10%;
+
+      }
+
+      #include_card .row {
+        background-color: white;
+        padding-top: 0rem;
+        margin-top: 0rem;
+      } */
+
+    /* .card-img {
+        height: 28.7rem;
+        width: 25rem;
+      } */
+
+    /* #include_card_text .card-body {
+        width: 25rem;
+        background-color: rgb(253, 241, 237);
+        height: 28.7rem;
+        margin-left: 40%;
+        justify-content: space-between;
+
+      }
+
+      #include_card_text .card-body span {
+        display: inline-flex;
+
+      }
+
+      #include_card_text .card-body span img {
+        width: 3rem;
+        height: 2rem;
+        padding-right: 1rem;
+        background-color: rgb(253, 241, 237);
+        margin-left: 15%;
+      } */
+    /* } */
+
+    /* @media only screen and (min-width: 1001px) and (max-width: 1199px) {
+
+
+      #include_card {
+        border: none;
+        left: 10%;
+        right: 10%;
+        /* left: 10%; */
+    /* margin-right: 20rem; */
+
+    /* } */
+
+    /* #include_card.h3 {
+        font-weight: bold;
+        padding-top: 25px;
+        color: rgba(214, 208, 169, 0.945)
+      }
+
+      #include_card .row {
+        background-color: white;
+        padding-top: 0rem;
+        margin-top: 0rem;
+      } */
+
+
+    /* #include_image {
+        margin-left: 0%;
+        height: 28.7rem;
+        width: 25rem;
+        padding-top: 0rem;
+        margin-top: 0rem;
+      }
+
+      #include_card_text {}
+
+      #include_card_text .card-body {
+        background-color: rgb(253, 241, 237);
+        height: 28.7rem;
+        width: 25rem;
+        display: flex;
+        margin-left: 27%;
+        flex-direction: column;
+        justify-content: space-between;
+
+      }
+
+      #include_card_text .card-body span {
+        display: inline-flex;
+
+      }
+
+      #include_card_text .card-body span img {
+        width: 3rem;
+        height: 2rem;
+        padding-right: 1rem;
+        background-color: rgb(253, 241, 237);
+      }
+
+      #include_card_text .card-body .span .p {}
+
+    }  */
+
+    @media only screen and (min-width: 1300px) {
+
+      #buttons1,
+      #buttons2 {
+        margin: auto;
+      }
+
+    }
+
+    @media only screen and (min-width: 1200px) {
+      #car2 {
+        display: none;
+      }
+
+
+      #item1 img {
+        height: 46rem;
+        width: 100%;
+        object-fit: cover;
+        object-position: 50% 20%;
+      }
+
+      #item2 img {
+        height: 46rem;
+        width: 100%;
+        object-fit: cover;
+        object-position: left 20%;
+        /* margin-left: 13%; */
+        /* margin-right: 13%; */
+        /* margin-top: 5%; */
+      }
+
+      #item2div {
+        font-weight: bold;
+        /* color: rgba(214, 208, 169, 0.945); */
+        bottom: 20%;
+        right: 50%;
+      }
+
+      #item2 .carousel-caption {
+        left: 55%;
+        bottom: 40%;
+        font-weight: bold;
+      }
+
+      #item1 .carousel-caption {
+        font-weight: bold;
+        color: white;
+
+        /* color: rgba(214, 208, 169, 0.945); */
+        bottom: 30%;
+        left: 40%;
+      }
+
+
+    }
+
+    @media only screen and (min-width: 1024px) and (max-width: 1199px) {
+      #car2 {
+        display: none;
+      }
+
+      /* .inner-carousel {
+        width: 100rem;
+      } */
+
+      #item1 img {
+        height: 50rem;
+        width: 100%;
+        object-fit: cover;
+        object-position: 70% 20%;
+      }
+
+      #item2 img {
+        height: 50rem;
+        width: 100%;
+        object-fit: cover;
+        object-position: 70% 20%;
+        /* margin-left: 13%; */
+        /* margin-right: 13%; */
+        /* margin-top: 5%; */
+      }
+
+      /* #item2div {
+        font-weight: bold;
+        /* color: rgba(214, 208, 169, 0.945); */
+      /* bottom: 20%;
+      right: 50%;
+    } */
+
+      #item2 .carousel-caption {
+        left: 55%;
+        bottom: 40%;
+        font-weight: bold;
+      }
+
+      #item1 .carousel-caption {
+        font-weight: bold;
+        color: white;
+
+        /* color: rgba(214, 208, 169, 0.945); */
+        bottom: 30%;
+        left: 40%;
+      }
+
+    }
+
+    #buttons1,
+    #buttons2,
+    #buttons3,
+    #buttons4,
+    #buttons5,
+    #buttons6,
+    #buttons7,
+    #buttons8 {
+      margin: auto;
+    }
+
+    @media only screen and (min-width: 1200px) {
+
+      .image-holder2 {
+        display: none;
+      }
+
+      .image-holder3 {
+        display: none;
+      }
+
+      .include-photo {
+        /* background: #f1f7fc;*/
+        padding-left: 80px;
+        padding-right: 80px;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+
+      }
+
+      #body {
+        background-color: rgb(253, 241, 237);
+        /* height: 30rem; */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding-left: 1rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        width: 90%;
+        height: 30rem;
+        /* margin-left: 7rem; */
+      }
+
+      #body span {
+
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #body span img {
+        width: 3rem;
+        height: 2rem;
+        padding-right: 1rem;
+        /* background-color: rgba(250, 249, 243, 0.945); */
+      }
+
+      .include-photo .image-holder1 {
+        display: table-cell;
+        /* width: 40%; */
+        margin: 0;
+        padding: 0;
+        height: 31.3rem;
+        /*background: url('https://rentista.s3.us-east-2.amazonaws.com/naeim-jafari-laobUPA4jR8-unsplash.jpg');*/
+        background-size: cover;
+
+      }
+
+      .include-photo .form-container {
+        display: flex;
+        flex-direction: row;
+        max-width: 800px;
+        width: 70%;
+        margin: 0 auto;
+        background: rgb(253, 241, 237);
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    @media only screen and (min-width: 1024px) and (max-width: 1199px) {
+
+      .image-holder2 {
+        display: none;
+      }
+
+      .image-holder3 {
+        display: none;
+      }
+
+      .include-photo {
+        /* background: #f1f7fc;*/
+        padding-left: 80px;
+        padding-right: 80px;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+
+      }
+
+      #body {
+        background-color: rgb(253, 241, 237);
+        /* height: 30rem; */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding-left: 1rem;
+        margin-top: 2rem;
+        padding-bottom: 1rem;
+        width: 90%;
+        height: 29rem;
+        /* margin-left: 7rem; */
+      }
+
+      #body span {
+
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #body span img {
+        width: 3rem;
+        height: 2rem;
+        padding-right: 1rem;
+        /* background-color: rgba(250, 249, 243, 0.945); */
+      }
+
+      .include-photo .image-holder1 {
+        display: table-cell;
+        /* width: 40%; */
+        margin: 0;
+        padding: 0;
+        height: 31.2rem;
+        /*background: url('https://rentista.s3.us-east-2.amazonaws.com/naeim-jafari-laobUPA4jR8-unsplash.jpg');*/
+        background-size: cover;
+
+      }
+
+      .include-photo .form-container {
+        display: flex;
+        flex-direction: row;
+        max-width: 800px;
+        width: 82%;
+        margin: 0 auto;
+        background: rgb(253, 241, 237);
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    @media only screen and (min-width: 992px) and (max-width: 1023px) {
+
+      .image-holder1 {
+        display: none;
+      }
+
+      .image-holder3 {
+        display: none;
+      }
+
+      .include-photo {
+        /* background: #f1f7fc;*/
+        padding-left: 80px;
+        padding-right: 80px;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+
+      }
+
+      #body {
+        background-color: rgb(253, 241, 237);
+        /* height: 30rem; */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding-left: 1rem;
+        padding-top: 1rem;
+        padding-bottom: 0.5rem;
+        width: 70%;
+        height: 25rem;
+        /* margin-left: 7rem; */
+      }
+
+      #body span {
+
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #body span img {
+        width: 3rem;
+        height: 2rem;
+        padding-right: 1rem;
+        /* background-color: rgba(250, 249, 243, 0.945); */
+      }
+
+      .include-photo .image-holder2 {
+        display: table-cell;
+        /* width: 40%; */
+        margin: 0;
+        padding: 0;
+        height: 25rem;
+        /*background: url('https://rentista.s3.us-east-2.amazonaws.com/naeim-jafari-laobUPA4jR8-unsplash.jpg');*/
+        background-size: cover;
+
+      }
+
+      .include-photo .form-container {
+        display: flex;
+        flex-direction: row;
+        max-width: 800px;
+        width: 70%;
+        margin: 0 auto;
+        background: rgb(253, 241, 237);
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+
+      .image-holder1 {
+        display: none;
+      }
+
+      .image-holder3 {
+        display: none;
+      }
+
+      .include-photo {
+        /* background: #f1f7fc;*/
+        padding-left: 80px;
+        padding-right: 80px;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+
+      }
+
+      #body {
+        background-color: rgb(253, 241, 237);
+        /* height: 30rem; */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding-left: 1rem;
+        padding-top: 1rem;
+        padding-bottom: 0.5rem;
+        width: 90%;
+        height: 25rem;
+        /* margin-left: 7rem; */
+      }
+
+      #body span {
+
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #body span img {
+        width: 3rem;
+        height: 2rem;
+        padding-right: 1rem;
+        /* background-color: rgba(250, 249, 243, 0.945); */
+      }
+
+      .include-photo .image-holder2 {
+        display: table-cell;
+        /* width: 40%; */
+        margin: 0;
+        padding: 0;
+        height: 25rem;
+        /*background: url('https://rentista.s3.us-east-2.amazonaws.com/naeim-jafari-laobUPA4jR8-unsplash.jpg');*/
+        background-size: cover;
+
+      }
+
+      .include-photo .form-container {
+        display: flex;
+        flex-direction: row;
+        max-width: 800px;
+        width: 95%;
+        margin: 0 auto;
+        background: rgb(253, 241, 237);
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    @media only screen and (min-width: 576px) and (max-width: 767px) {
+
+      .image-holder1 {
+        display: none;
+      }
+
+      .image-holder3 {
+        display: none;
+      }
+
+      .include-photo {
+        /* background: #f1f7fc;*/
+        padding-left: 80px;
+        padding-right: 80px;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+
+      }
+
+      #body {
+        background-color: rgb(253, 241, 237);
+        /* height: 30rem; */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding-left: 1rem;
+        padding-top: 1rem;
+        padding-bottom: 0.5rem;
+        width: 90%;
+        height: 25rem;
+        /* margin-left: 7rem; */
+      }
+
+      #body span {
+
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #body span img {
+        width: 3rem;
+        height: 2rem;
+        padding-right: 1rem;
+        /* background-color: rgba(250, 249, 243, 0.945); */
+      }
+
+      .include-photo .image-holder2 {
+        display: table-cell;
+        /* width: 40%; */
+        margin: 0;
+        padding: 0;
+        height: 25rem;
+        /*background: url('https://rentista.s3.us-east-2.amazonaws.com/naeim-jafari-laobUPA4jR8-unsplash.jpg');*/
+        background-size: cover;
+
+      }
+
+      .include-photo .form-container {
+        display: flex;
+        flex-direction: column;
+        max-width: 800px;
+        width: 69%;
+        margin: 0 auto;
+        background: rgb(253, 241, 237);
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+      }
+    }
+
+
+    @media only screen and (min-width: 500px) and (max-width: 575px) {
+
+      .image-holder1 {
+        display: none;
+      }
+
+      .image-holder3 {
+        display: none;
+      }
+
+      .include-photo {
+        /* background: #f1f7fc;*/
+        padding-left: 80px;
+        padding-right: 80px;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+
+      }
+
+      #body {
+        /* background-color: rgb(253, 241, 237); */
+        /* height: 30rem; */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        /* padding-left: 1rem; */
+        padding-top: 1rem;
+        padding-bottom: 0.5rem;
+        width: 100%;
+        /* height: 25rem; */
+        /* margin-left: 7rem; */
+      }
+
+      #body span {
+
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #body span img {
+        width: 3rem;
+        height: 2rem;
+        padding-right: 1rem;
+        /* background-color: rgba(250, 249, 243, 0.945); */
+      }
+
+      .include-photo .image-holder2 {
+        display: table-cell;
+        /* width: 40%; */
+        margin: 0;
+        padding: 0;
+        height: 25rem;
+        /*background: url('https://rentista.s3.us-east-2.amazonaws.com/naeim-jafari-laobUPA4jR8-unsplash.jpg');*/
+        background-size: cover;
+
+      }
+
+      .include-photo .form-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 800px;
+        width: 70%;
+        margin: 0 auto;
+        /* background: rgb(253, 241, 237);
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1); */
+      }
+    }
+
+
+    @media only screen and (min-width: 450px) and (max-width: 499px) {
+
+      .image-holder1 {
+        display: none;
+      }
+
+      .image-holder3 {
+        display: none;
+      }
+
+      .include-photo {
+        /* background: #f1f7fc;*/
+        padding-left: 80px;
+        padding-right: 80px;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+
+      }
+
+      #body {
+        /* background-color: rgb(253, 241, 237); */
+        /* height: 30rem; */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        /* padding-left: 1rem; */
+        padding-top: 1rem;
+        padding-bottom: 0.5rem;
+        width: 100%;
+        /* height: 25rem; */
+        /* margin-left: 7rem; */
+      }
+
+      #body span {
+
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #body span img {
+        width: 3rem;
+        height: 2rem;
+        padding-right: 1rem;
+        /* background-color: rgba(250, 249, 243, 0.945); */
+      }
+
+      .include-photo .image-holder2 {
+        display: table-cell;
+        /* width: 40%; */
+        margin: 0;
+        padding: 0;
+        height: 25rem;
+        /*background: url('https://rentista.s3.us-east-2.amazonaws.com/naeim-jafari-laobUPA4jR8-unsplash.jpg');*/
+        background-size: cover;
+
+      }
+
+      .include-photo .form-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 800px;
+        width: 80%;
+        margin: 0 auto;
+        /* background: rgb(253, 241, 237);
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1); */
+      }
+    }
+
+
+    @media only screen and (min-width: 420px) and (max-width: 449px) {
+
+      .image-holder1 {
+        display: none;
+      }
+
+
+      .image-holder3 {
+        display: none;
+      }
+
+      .include-photo {
+        /* background: #f1f7fc;*/
+        padding-left: 80px;
+        padding-right: 80px;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+
+      }
+
+      #body {
+        /* background-color: rgb(253, 241, 237); */
+        /* height: 30rem; */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        /* padding-left: 1rem; */
+        padding-top: 1rem;
+        padding-bottom: 0.5rem;
+        width: 100%;
+        /* height: 25rem; */
+        /* margin-left: 7rem; */
+      }
+
+      #body span {
+
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #body span img {
+        width: 3rem;
+        height: 2rem;
+        padding-right: 1rem;
+        /* background-color: rgba(250, 249, 243, 0.945); */
+      }
+
+      .include-photo .image-holder2 {
+        display: table-cell;
+        /* width: 40%; */
+        margin: 0;
+        padding: 0;
+        height: 25rem;
+        /*background: url('https://rentista.s3.us-east-2.amazonaws.com/naeim-jafari-laobUPA4jR8-unsplash.jpg');*/
+        background-size: cover;
+
+      }
+
+      .include-photo .form-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 800px;
+        width: 90%;
+        margin: 0 auto;
+        /* background: rgb(253, 241, 237);
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1); */
+      }
+    }
+
+    @media only screen and (max-width: 419px) {
+
+      .image-holder1 {
+        display: none;
+      }
+
+      .image-holder2 {
+        display: none;
+      }
+
+      .include-photo {
+        /* background: #f1f7fc;*/
+        padding-left: 80px;
+        padding-right: 80px;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+
+      }
+
+      #body {
+        /* background-color: rgb(253, 241, 237); */
+        /* height: 30rem; */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        /* padding-left: 1rem; */
+        padding-top: 1rem;
+        padding-bottom: 0.5rem;
+        width: 100%;
+        /* height: 25rem; */
+        /* margin-left: 7rem; */
+      }
+
+      #body span {
+
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #body span img {
+        width: 3rem;
+        height: 2rem;
+        padding-right: 1rem;
+        /* background-color: rgba(250, 249, 243, 0.945); */
+      }
+
+      .include-photo .image-holder3 {
+        display: table-cell;
+        /* width: 40%; */
+        margin: 0;
+        padding: 0;
+        /* height: 25rem; */
+        /*background: url('https://rentista.s3.us-east-2.amazonaws.com/naeim-jafari-laobUPA4jR8-unsplash.jpg');*/
+        background-size: cover;
+
+      }
+
+      .include-photo .form-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 800px;
+        width: 100%;
+        margin: 0 auto;
+        /* background: rgb(253, 241, 237);
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1); */
+      }
+    }
+
+
+    /* @media only screen and (min-width: 1200px) {
+
+      .include-photo { */
+    /* background: #f1f7fc;*/
+    /* padding-left: 80px;
+        padding-right: 80px;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+
+      }
+
+      #body {
+        background-color: rgb(253, 241, 237); */
+    /* height: 30rem; */
+    /* display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding-left: 1rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        width: 90%;
+        height: 30rem; */
+    /* margin-left: 7rem; */
+    /* }
+
+      #body span {
+
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+      } */
+
+    /* #body span img {
+        width: 3rem;
+        height: 2rem;
+        padding-right: 1rem; */
+    /* background-color: rgba(250, 249, 243, 0.945); */
+    /* } */
+
+    /* .include-photo .image-holder {
+        display: table-cell; */
+    /* width: 40%; */
+    /* margin: 0;
+        padding: 0;
+        height: 31.3rem; */
+    /*background: url('https://rentista.s3.us-east-2.amazonaws.com/naeim-jafari-laobUPA4jR8-unsplash.jpg');*/
+    /* background-size: cover;
+
+      }
+
+      .include-photo .form-container {
+        display: flex;
+        flex-direction: row;
+        max-width: 800px;
+        width: 70%;
+        margin: 0 auto;
+        background: rgb(253, 241, 237);
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+      }
+    } */
+  </style>
+
+
+  <script>
+
+
+
+    // price_selection_functions
+
+    function nsa_s_selectfunc() {
+      var x = document.getElementById("nsa_s_select").value;
+
+      document.getElementById("nsa_s_p").innerHTML = "€" + x;
+    }
+    // function sts_s_selectfunc() {
+    //   var x = document.getElementById("sts_s_select").value;
+    //   var y = document.getElementById("sts_s_select");
+    //   var z = y.options[y.selectedIndex].text;
+    //   var outfits = z.split(" ");
+    //   var outfit = outfits[0];
+    //   var total = outfit * 3;
+    //   document.getElementById("sts_s_p").innerHTML = "€" + x;
+    //   document.getElementById("sts_s_t").innerHTML = total;
+    // }
+
+    function f_s_selectfunc() {
+      var x = document.getElementById("f_s_select").value;
+      document.getElementById("f_s_p").innerHTML = "€" + x;
+    }
+
+    function nsa_p_selectfunc() {
+      var x = document.getElementById("nsa_p_select").value;
+      document.getElementById("nsa_p_p").innerHTML = "€" + x;
+    }
+    // function sts_p_selectfunc() {
+    //   var x = document.getElementById("sts_p_select").value;
+    //   var y = document.getElementById("sts_p_select");
+    //   var z = y.options[y.selectedIndex].text;
+    //   var outfits = z.split(" ");
+    //   var outfit = outfits[0];
+    //   var total = outfit * 3;
+    //   document.getElementById("sts_p_p").innerHTML = "€" + x;
+    //   document.getElementById("sts_p_t").innerHTML = total;
+    // }
+
+    function f_p_selectfunc() {
+      var x = document.getElementById("f_p_select").value;
+      document.getElementById("f_p_p").innerHTML = "€" + x;
+    }
+
+
+
+  </script>
+
+</head>
+
+<body>
+
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <a class=" navbar-brand" href="#"
+      style="font-size:xx-large; font-weight: normal; color: rgba(214, 208, 169, 0.945);">
+      RENTISTA
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+      aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation" style="margin-inline-end: auto;">
+      <span class="navbar-toggler-icon" id="nav-toggle-button"> </span> </span>
+      <span class="navbar-toggler-icon" id="nav-toggle-button"> </span> </span>
+      <span class="navbar-toggler-icon" id="nav-toggle-button"> </span> </span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav mr-auto">
+
+        <li class="nav-item active">
+          <a class="nav-link" href="#info" style=" font-weight: bold; color: rgba(214, 208, 169, 0.945)">Info<span
+              class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#outfits" style="
+            font-weight: bold; color: rgba(214, 208, 169, 0.945)">Outfits <span class=" sr-only">(current)</span></a>
+        </li>
+
+
+
+        <li class="nav-item active">
+          <a class="nav-link" href="#prices" style="
+            font-weight: bold; color: rgba(214, 208, 169, 0.945)">Prices<span class=" sr-only">(current)</span></a>
+        </li>
+
+
+        <li class="nav-item active">
+          <a class="nav-link" href="#include" style="
+            font-weight: bold; color: rgba(214, 208, 169, 0.945)">Benefits<span class=" sr-only">(current)</span></a>
+        </li>
+      </ul>
+    </div>
+    <!-- 
+      <ul class="navbar-nav ml-auto" id="subscribe">
+
+        <button class="btn btn-primary" type="submit">Sign-up</button>
+
+      </ul> -->
+
+  </nav>
+
+  <!-- navbar -->
+  <!-- Carousel cover image -->
+  <div id="car1">
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+      <div class="carousel-inner" id="carousel1">
+        <div class="carousel-item active" id="item1" style="">
+          <img src="https://rentista.s3.us-east-2.amazonaws.com/naeim-jafari-mW3145wbwlw-unsplash_cover2.jpg"
+            class="d-block w-100" alt="..." style=" ">
+          <div class="carousel-caption d-md-block">
+
+            <h3 style="color:white;">Wear a great outfit all the time</h3>
+            <hr id="car_hr" style="width:15rem; background-color: white;">
+            <h4>COMING SOON</h4>
+            <p id="buttons1"><button id="car_button1" type="button" class="btn btn-outline-light"
+                style="margin:0.5rem; width:7rem; color: white;" data-toggle="modal"
+                data-target="#exampleModal">Sign-up</button>
+              <button id="car_button2" type="button" class="btn btn-outline-light" style="color:white"><a href="#info"
+                  style="color:white">Learn
+                  More</a></button>
+            </p>
+            <i>
+            </i>
+          </div>
+        </div>
+        <div class="carousel-item" id="item2">
+          <img src="https://rentista.s3.us-east-2.amazonaws.com/striped-blouse-fashion.jpg" class="d-block w-100"
+            alt="...">
+          <div class=" carousel-caption d-md-block">
+            <h3 style="color:black;">Sustainable, Budget-Friendly & Convenient </h3>
+
+            <!-- <hr id="car_hr" style="width:15rem; background-color: black;"> -->
+
+            <i>
+              <h5 style="color:black;"></h5>
+            </i>
+
+            <p id="buttons2"><button id="car_button3" type="button" class="btn btn-outline-dark"
+                style="margin:0.5rem; width:7rem; color: black;" data-toggle="modal"
+                data-target="#exampleModal">Sign-up</button id>
+              <button id="car_button4" type="button" class="btn btn-outline-dark" style="color:black"><a href="#info"
+                  style="color:black">Learn
+                  More</a></button></p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="car2">
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+      <div class="carousel-inner" id="carousel1">
+        <div class="carousel-item active" id="item1" style="">
+          <img src="https://rentista.s3.us-east-2.amazonaws.com/naeim-jafari-mW3145wbwlw-unsplash_cover2.jpg"
+            class="d-block w-100" alt="..." style=" ">
+          <div class="carousel-caption d-md-block">
+            <h3 style="color:white;">Wear a great outfit all the time</h3>
+
+
+
+            <!-- <h5>Sustainable, budget-friendly and convenient</h5> -->
+
+            <hr id="car_hr3">
+
+            <h5>COMING SOON</h5>
+            <p id="buttons3"><button id="car_button5" type="button" class="btn btn-outline-light"
+                style="margin:0.5rem; width:7rem; color: white;" data-toggle="modal"
+                data-target="#exampleModal">Sign-up</button>
+              <button id="car_button6" type="button" class="btn btn-outline-light" style="color:white"><a href="#info"
+                  style="color:white">Learn
+                  More</a></button>
+            </p>
+            <i>
+            </i>
+          </div>
+        </div>
+        <div class="carousel-item" id="item2">
+          <img src="https://rentista.s3.us-east-2.amazonaws.com/fashion-model-in-pink.jpg" class="d-block w-100"
+            alt="...">
+          <div class=" carousel-caption d-md-block">
+            <h3 style="color:white;">Sustainable, Budget-Friendly & Convenient </h3>
+
+            <hr id="car_hr4">
+
+            <i>
+              <!-- <h5></h5> -->
+            </i>
+
+            <p id="buttons4"><button id="car_button7" type="button" class="btn btn-outline-light"
+                style="margin:0.5rem; width:7rem; color: white;" data-toggle="modal"
+                data-target="#exampleModal">Sign-up</button id>
+              <button id="car_button8" type="button" class="btn btn-outline-light" style="color:white"><a href="#info"
+                  style="color:white">Learn
+                  More</a></button>></p>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Carousel cover image -->
+  <br>
+
+
+  <!-- how it works -->
+
+
+  <div id="info" class="features-boxed">
+    <div class="container">
+      <div class="intro">
+        <h2 class="text-center">How it works</h2>
+        <p class="text-center">
+          We provide
+          outfits that will have you covered for parties, office, vacations and much more.
+          Our rental process is simple and easy, and our prices vary
+          based on how many items you will receive.
+        </p>
+      </div>
+      <div class="row justify-content-center features">
+        <div class="col-sm-4 col-md-4 col-lg-2 item">
+          <div class="box"> <img src="https://rentista.s3.us-east-2.amazonaws.com/subscription.png"
+              class="card-img-top">
+            <h6 class="name">Join</h6>
+            <p class="description">Sign up for a weekly or unlimited subscription and cancel anytime. </p>
+          </div>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-2 item">
+          <div class="box"> <img src=" https://rentista.s3.us-east-2.amazonaws.com/fashion-event-icon.png"
+              class="card-img-top">
+            <h3 class=" name">Shop</h3>
+            <p class="description">Outfits for any ocassion. Browse our brands and select your favourites.</p>
+          </div>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-2 item">
+          <div class="box"> <img src="https://rentista.s3.us-east-2.amazonaws.com/free-delivery.png"
+              class="card-img-top">
+            <h3 class="name">Receive</h3>
+            <p class="description">Get your wardrobe delivered to your door-steps with our free shipping!</p>
+          </div>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-2 item">
+          <div class="box"><img src="https://rentista.s3.us-east-2.amazonaws.com/dress.png" class="card-img-top">
+            <h3 class="name">Wear </h3>
+            <p class="description">Take the time you need. Items can be rented for a week or longer.
+            </p>
+          </div>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-2 item">
+          <div class="box"> <img src="https://rentista.s3.us-east-2.amazonaws.com/free-delivery.png"
+              class="card-img-top">
+            <h3 class="name">Return</h3>
+            <p class="description">Returning clothes is very easy. Just repack your items and send it back to us.</p>
+          </div>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-2 item">
+          <div class="box"> <img src="https://rentista.s3.us-east-2.amazonaws.com/renewable-energy.png"
+              class="card-img-top">
+            <h3 class="name">Repeat</h3>
+            <p class="description">No need to feel empty-handed. Receive your next order in no time. </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- how it works -->
+
+  <!-- 
+slick image slider -->
+  <center>
+    <h3 id="outfits"> Outfits & Brands</h3>
+
+    <br>
+  </center>
+
+  <div class="container" id="computer">
+
+    <div class="for_slick_slider computer">
+
+      <div class="items">
+        <a href="https://www.thekooples.com">The Kooples</a><img
+          src="https://rentista.s3.us-east-2.amazonaws.com/the+kooples.jpg" class="pic">
+      </div>
+      <div class="items">
+        <a href="https://www.staud.clothing">Staud</a><img src="https://rentista.s3.us-east-2.amazonaws.com/staud.jpg"
+          class="pic">
+      </div>
+      <div class="items">
+        <a href="https://eu.sandro-paris.com/en/woman/">Sandro</a><img
+          src="https://rentista.s3.us-east-2.amazonaws.com/joli_sandro.jpg" class="pic">
+      </div>
+      <div class="items">
+        <a href="https://www.sezane.com">Sézane</a><img src="https://rentista.s3.us-east-2.amazonaws.com/sezane4.jpg"
+          class="pic">
+      </div>
+      <div class="items">
+        <a href="https://www.donnakaran.com">DKNY</a><img src="https://rentista.s3.us-east-2.amazonaws.com/dkny1.jpg"
+          class="pic">
+      </div>
+      <div class="items">
+        <a href="https://www.thereformation.com">Reformation</a><img
+          src="https://rentista.s3.us-east-2.amazonaws.com/reformation2.jpg" class="pic">
+      </div>
+      <div class="items">
+        <a href="https://www.na-kd.com/en">NAKD</a><img src="https://rentista.s3.us-east-2.amazonaws.com/nakd1.jpg"
+          class="pic">
+      </div>
+      <div class="items">
+        <a href="https://maggiemarilyn.com/">Maggie Marilyn</a><img
+          src="https://rentista.s3.us-east-2.amazonaws.com/maggie_marilyn2.jpg" class="pic">
+      </div>
+      <div class="items">
+        <a href="https://bastetnoir.com/">BastetNoir</a><img
+          src="https://rentista.s3.us-east-2.amazonaws.com/DSC0551_1050x.jpg" class="pic">
+      </div>
+      <div class="items">
+        <a href="https://www.bardot.com">Bardot</a><img src="https://rentista.s3.us-east-2.amazonaws.com/bardot3.jpg"
+          class="pic">
+      </div>
+      <div class="items">
+        <a href="https://www.designersremix.com/">Designer Remix</a><img
+          src="https://rentista.s3.us-east-2.amazonaws.com/designerremix4.jpg" class="pic">
+      </div>
+
+      <div class="items">
+        <a href="https://keepsakethelabel.com.au/">Keepsake</a><img
+          src="https://rentista.s3.us-east-2.amazonaws.com/keepsake+the+label2.jpg" class="pic">
+      </div>
+      <div class="items">
+        <a href="https://duchessandco.com/">DuchessandCo</a><img
+          src="https://rentista.s3.us-east-2.amazonaws.com/duchess+and+co.jpg" class="pic">
+      </div>
+      <div class="items">
+        <a href="https://eu.sandro-paris.com/en/woman/">Sandro</a><img
+          src="https://rentista.s3.us-east-2.amazonaws.com/sandro3.jpg" class="pic">
+      </div>
+      <div class="items">
+        <a href="https://www.sezane.com">Sézane</a><img src="https://rentista.s3.us-east-2.amazonaws.com/sezane3.jpg"
+          class="pic">
+      </div>
+      <div class="items">
+        <a href="https://www.bardot.com">Bardot</a><img src="https://rentista.s3.us-east-2.amazonaws.com/bardot.jpg"
+          class="pic">
+      </div>
+      <div class="items">
+        <a href="https://www.thereformation.com">Reformation</a><img
+          src="https://rentista.s3.us-east-2.amazonaws.com/reformation.jpg" class="pic">
+      </div>
+      <div class="items">
+        <a href="https://www.staud.clothing">Staud</a><img
+          src="https://rentista.s3.us-east-2.amazonaws.com/joli_staud.jpg" class="pic">
+      </div>
+      <div class="items">
+        <a href="https://keepsakethelabel.com.au/">Keepsake</a><img
+          src="https://rentista.s3.us-east-2.amazonaws.com/keepsake+the+label.jpg" class="pic">
+      </div>
+
+      <div class="items">
+        <a href="https://www.designersremix.com/">Designer Remix</a><img
+          src="https://rentista.s3.us-east-2.amazonaws.com/designerremix.jpg" class="pic">
+      </div>
+      <div class="items">
+        <a href="https://bastetnoir.com/">BastetNoir</a><img
+          src="https://rentista.s3.us-east-2.amazonaws.com/bastet_awinita4.jpg" class="pic">
+      </div>
+    </div>
+
+    <div class="arrow_prev">
+      <span>
+        <i class="fas fa-chevron-left" style="font-size: large;"></i>
+      </span>
+    </div>
+
+    <div class="arrow_next">
+      <span>
+        <i class="fas fa-chevron-right" style="font-size: large;"></i>
+      </span>
+    </div>
+
+  </div>
+
+  <div class="container" id="phone">
+
+    <div class="for_slick_slider phone">
+      <div class="items">
+        <a href="https://www.thekooples.com">The Kooples</a><img
+          src="https://rentista.s3.us-east-2.amazonaws.com/the+kooples.jpg" class="pic">
+      </div>
+      <div class="items">
+        <a href="https://www.staud.clothing">Staud</a><img src="https://rentista.s3.us-east-2.amazonaws.com/staud.jpg"
+          class="pic">
+      </div>
+      <div class="items">
+        <a href="https://eu.sandro-paris.com/en/woman/">Sandro</a><img
+          src="https://rentista.s3.us-east-2.amazonaws.com/joli_sandro.jpg" class="pic">
+      </div>
+      <div class="items">
+        <a href="https://www.sezane.com">Sézane</a><img src="https://rentista.s3.us-east-2.amazonaws.com/sezane4.jpg"
+          class="pic">
+      </div>
+      <div class="items">
+        <a href="https://www.donnakaran.com">DKNY</a><img src="https://rentista.s3.us-east-2.amazonaws.com/dkny1.jpg"
+          class="pic">
+      </div>
+      <div class="items">
+        <a href="https://www.thereformation.com">Reformation</a><img
+          src="https://rentista.s3.us-east-2.amazonaws.com/reformation2.jpg" class="pic">
+      </div>
+      <div class="items">
+        <a href="https://www.na-kd.com/en">NAKD</a><img src="https://rentista.s3.us-east-2.amazonaws.com/nakd1.jpg"
+          class="pic">
+      </div>
+      <div class="items">
+        <a href="https://maggiemarilyn.com/">Maggie Marilyn</a><img
+          src="https://rentista.s3.us-east-2.amazonaws.com/maggie_marilyn2.jpg" class="pic">
+      </div>
+      <div class="items">
+        <a href="https://bastetnoir.com/">BastetNoir</a><img
+          src="https://rentista.s3.us-east-2.amazonaws.com/DSC0551_1050x.jpg" class="pic">
+      </div>
+      <div class="items">
+        <a href="https://www.bardot.com">Bardot</a><img src="https://rentista.s3.us-east-2.amazonaws.com/bardot3.jpg"
+          class="pic">
+      </div>
+      <div class="items">
+        <a href="https://www.designersremix.com/">Designer Remix</a><img
+          src="https://rentista.s3.us-east-2.amazonaws.com/designerremix4.jpg" class="pic">
+      </div>
+
+      <div class="items">
+        <a href="https://keepsakethelabel.com.au/">Keepsake</a><img
+          src="https://rentista.s3.us-east-2.amazonaws.com/keepsake+the+label2.jpg" class="pic">
+      </div>
+      <div class="items">
+        <a href="https://duchessandco.com/">DuchessandCo</a><img
+          src="https://rentista.s3.us-east-2.amazonaws.com/duchess+and+co.jpg" class="pic">
+      </div>
+      <div class="items">
+        <a href="https://eu.sandro-paris.com/en/woman/">Sandro</a><img
+          src="https://rentista.s3.us-east-2.amazonaws.com/sandro3.jpg" class="pic">
+      </div>
+      <div class="items">
+        <a href="https://www.sezane.com">Sézane</a><img src="https://rentista.s3.us-east-2.amazonaws.com/sezane3.jpg"
+          class="pic">
+      </div>
+      <div class="items">
+        <a href="https://www.bardot.com">Bardot</a><img src="https://rentista.s3.us-east-2.amazonaws.com/bardot.jpg"
+          class="pic">
+      </div>
+      <div class="items">
+        <a href="https://www.thereformation.com">Reformation</a><img
+          src="https://rentista.s3.us-east-2.amazonaws.com/reformation.jpg" class="pic">
+      </div>
+      <div class="items">
+        <a href="https://www.staud.clothing">Staud</a><img
+          src="https://rentista.s3.us-east-2.amazonaws.com/joli_staud.jpg" class="pic">
+      </div>
+      <div class="items">
+        <a href="https://keepsakethelabel.com.au/">Keepsake</a><img
+          src="https://rentista.s3.us-east-2.amazonaws.com/keepsake+the+label.jpg" class="pic">
+      </div>
+
+      <div class="items">
+        <a href="https://www.designersremix.com/">Designer Remix</a><img
+          src="https://rentista.s3.us-east-2.amazonaws.com/designerremix.jpg" class="pic">
+      </div>
+      <div class="items">
+        <a href="https://bastetnoir.com/">BastetNoir</a><img
+          src="https://rentista.s3.us-east-2.amazonaws.com/bastet_awinita4.jpg" class="pic">
+      </div>
+    </div>
+
+
+    <div class="arrow_pre">
+      <span>
+        <i class="fas fa-chevron-left" style="font-size: large;"></i>
+      </span>
+    </div>
+    <div class="arrow_nex">
+      <span>
+        <i class="fas fa-chevron-right" style="font-size: large;"></i>
+      </span>
+    </div>
+
+  </div>
+
+  <div class="container" id="ipro">
+
+    <div class="for_slick_slider ipro">
+      <div class="items">
+        <a href="https://www.thekooples.com">The Kooples</a><img
+          src="https://rentista.s3.us-east-2.amazonaws.com/the+kooples.jpg" class="pic">
+      </div>
+      <div class="items">
+        <a href="https://www.staud.clothing">Staud</a><img src="https://rentista.s3.us-east-2.amazonaws.com/staud.jpg"
+          class="pic">
+      </div>
+      <div class="items">
+        <a href="https://eu.sandro-paris.com/en/woman/">Sandro</a><img
+          src="https://rentista.s3.us-east-2.amazonaws.com/joli_sandro.jpg" class="pic">
+      </div>
+      <div class="items">
+        <a href="https://www.sezane.com">Sézane</a><img src="https://rentista.s3.us-east-2.amazonaws.com/sezane4.jpg"
+          class="pic">
+      </div>
+      <div class="items">
+        <a href="https://www.donnakaran.com">DKNY</a><img src="https://rentista.s3.us-east-2.amazonaws.com/dkny1.jpg"
+          class="pic">
+      </div>
+      <div class="items">
+        <a href="https://www.thereformation.com">Reformation</a><img
+          src="https://rentista.s3.us-east-2.amazonaws.com/reformation2.jpg" class="pic">
+      </div>
+      <div class="items">
+        <a href="https://www.na-kd.com/en">NAKD</a><img src="https://rentista.s3.us-east-2.amazonaws.com/nakd1.jpg"
+          class="pic">
+      </div>
+      <div class="items">
+        <a href="https://maggiemarilyn.com/">Maggie Marilyn</a><img
+          src="https://rentista.s3.us-east-2.amazonaws.com/maggie_marilyn2.jpg" class="pic">
+      </div>
+      <div class="items">
+        <a href="https://bastetnoir.com/">BastetNoir</a><img
+          src="https://rentista.s3.us-east-2.amazonaws.com/DSC0551_1050x.jpg" class="pic">
+      </div>
+      <div class="items">
+        <a href="https://www.bardot.com">Bardot</a><img src="https://rentista.s3.us-east-2.amazonaws.com/bardot3.jpg"
+          class="pic">
+      </div>
+      <div class="items">
+        <a href="https://www.designersremix.com/">Designer Remix</a><img
+          src="https://rentista.s3.us-east-2.amazonaws.com/designerremix4.jpg" class="pic">
+      </div>
+
+      <div class="items">
+        <a href="https://keepsakethelabel.com.au/">Keepsake</a><img
+          src="https://rentista.s3.us-east-2.amazonaws.com/keepsake+the+label2.jpg" class="pic">
+      </div>
+      <div class="items">
+        <a href="https://duchessandco.com/">DuchessandCo</a><img
+          src="https://rentista.s3.us-east-2.amazonaws.com/duchess+and+co.jpg" class="pic">
+      </div>
+      <div class="items">
+        <a href="https://eu.sandro-paris.com/en/woman/">Sandro</a><img
+          src="https://rentista.s3.us-east-2.amazonaws.com/sandro3.jpg" class="pic">
+      </div>
+      <div class="items">
+        <a href="https://www.sezane.com">Sézane</a><img src="https://rentista.s3.us-east-2.amazonaws.com/sezane3.jpg"
+          class="pic">
+      </div>
+      <div class="items">
+        <a href="https://www.bardot.com">Bardot</a><img src="https://rentista.s3.us-east-2.amazonaws.com/bardot.jpg"
+          class="pic">
+      </div>
+      <div class="items">
+        <a href="https://www.thereformation.com">Reformation</a><img
+          src="https://rentista.s3.us-east-2.amazonaws.com/reformation.jpg" class="pic">
+      </div>
+      <div class="items">
+        <a href="https://www.staud.clothing">Staud</a><img
+          src="https://rentista.s3.us-east-2.amazonaws.com/joli_staud.jpg" class="pic">
+      </div>
+      <div class="items">
+        <a href="https://keepsakethelabel.com.au/">Keepsake</a><img
+          src="https://rentista.s3.us-east-2.amazonaws.com/keepsake+the+label.jpg" class="pic">
+      </div>
+
+      <div class="items">
+        <a href="https://www.designersremix.com/">Designer Remix</a><img
+          src="https://rentista.s3.us-east-2.amazonaws.com/designerremix.jpg" class="pic">
+      </div>
+      <div class="items">
+        <a href="https://bastetnoir.com/">BastetNoir</a><img
+          src="https://rentista.s3.us-east-2.amazonaws.com/bastet_awinita4.jpg" class="pic">
+      </div>
+    </div>
+
+
+    <div class="arrow_prev1">
+      <span>
+        <i class="fas fa-chevron-left" style="font-size: large;"></i>
+      </span>
+    </div>
+    <div class="arrow_next1">
+      <span>
+        <i class="fas fa-chevron-right" style="font-size: large;"></i>
+      </span>
+    </div>
+
+  </div>
+
+
+  <div class="container" id="ipad">
+
+    <div class="for_slick_slider ipad">
+      <div class="items">
+        <a href="https://www.thekooples.com">The Kooples</a><img
+          src="https://rentista.s3.us-east-2.amazonaws.com/the+kooples.jpg" class="pic">
+      </div>
+      <div class="items">
+        <a href="https://www.staud.clothing">Staud</a><img src="https://rentista.s3.us-east-2.amazonaws.com/staud.jpg"
+          class="pic">
+      </div>
+      <div class="items">
+        <a href="https://eu.sandro-paris.com/en/woman/">Sandro</a><img
+          src="https://rentista.s3.us-east-2.amazonaws.com/joli_sandro.jpg" class="pic">
+      </div>
+      <div class="items">
+        <a href="https://www.sezane.com">Sézane</a><img src="https://rentista.s3.us-east-2.amazonaws.com/sezane4.jpg"
+          class="pic">
+      </div>
+      <div class="items">
+        <a href="https://www.donnakaran.com">DKNY</a><img src="https://rentista.s3.us-east-2.amazonaws.com/dkny1.jpg"
+          class="pic">
+      </div>
+      <div class="items">
+        <a href="https://www.thereformation.com">Reformation</a><img
+          src="https://rentista.s3.us-east-2.amazonaws.com/reformation2.jpg" class="pic">
+      </div>
+      <div class="items">
+        <a href="https://www.na-kd.com/en">NAKD</a><img src="https://rentista.s3.us-east-2.amazonaws.com/nakd1.jpg"
+          class="pic">
+      </div>
+      <div class="items">
+        <a href="https://maggiemarilyn.com/">Maggie Marilyn</a><img
+          src="https://rentista.s3.us-east-2.amazonaws.com/maggie_marilyn2.jpg" class="pic">
+      </div>
+      <div class="items">
+        <a href="https://bastetnoir.com/">BastetNoir</a><img
+          src="https://rentista.s3.us-east-2.amazonaws.com/DSC0551_1050x.jpg" class="pic">
+      </div>
+      <div class="items">
+        <a href="https://www.bardot.com">Bardot</a><img src="https://rentista.s3.us-east-2.amazonaws.com/bardot3.jpg"
+          class="pic">
+      </div>
+      <div class="items">
+        <a href="https://www.designersremix.com/">Designer Remix</a><img
+          src="https://rentista.s3.us-east-2.amazonaws.com/designerremix4.jpg" class="pic">
+      </div>
+
+      <div class="items">
+        <a href="https://keepsakethelabel.com.au/">Keepsake</a><img
+          src="https://rentista.s3.us-east-2.amazonaws.com/keepsake+the+label2.jpg" class="pic">
+      </div>
+      <div class="items">
+        <a href="https://duchessandco.com/">DuchessandCo</a><img
+          src="https://rentista.s3.us-east-2.amazonaws.com/duchess+and+co.jpg" class="pic">
+      </div>
+      <div class="items">
+        <a href="https://eu.sandro-paris.com/en/woman/">Sandro</a><img
+          src="https://rentista.s3.us-east-2.amazonaws.com/sandro3.jpg" class="pic">
+      </div>
+      <div class="items">
+        <a href="https://www.sezane.com">Sézane</a><img src="https://rentista.s3.us-east-2.amazonaws.com/sezane3.jpg"
+          class="pic">
+      </div>
+      <div class="items">
+        <a href="https://www.bardot.com">Bardot</a><img src="https://rentista.s3.us-east-2.amazonaws.com/bardot.jpg"
+          class="pic">
+      </div>
+      <div class="items">
+        <a href="https://www.thereformation.com">Reformation</a><img
+          src="https://rentista.s3.us-east-2.amazonaws.com/reformation.jpg" class="pic">
+      </div>
+      <div class="items">
+        <a href="https://www.staud.clothing">Staud</a><img
+          src="https://rentista.s3.us-east-2.amazonaws.com/joli_staud.jpg" class="pic">
+      </div>
+      <div class="items">
+        <a href="https://keepsakethelabel.com.au/">Keepsake</a><img
+          src="https://rentista.s3.us-east-2.amazonaws.com/keepsake+the+label.jpg" class="pic">
+      </div>
+
+      <div class="items">
+        <a href="https://www.designersremix.com/">Designer Remix</a><img
+          src="https://rentista.s3.us-east-2.amazonaws.com/designerremix.jpg" class="pic">
+      </div>
+      <div class="items">
+        <a href="https://bastetnoir.com/">BastetNoir</a><img
+          src="https://rentista.s3.us-east-2.amazonaws.com/bastet_awinita4.jpg" class="pic">
+      </div>
+
+    </div>
+
+    <div class="arrow_prev2">
+      <span>
+        <i class="fas fa-chevron-left" style="font-size: large;"></i>
+      </span>
+    </div>
+    <div class="arrow_next2">
+      <span>
+        <i class="fas fa-chevron-right" style="font-size: large;"></i>
+      </span>
+    </div>
+
+  </div>
+
+  <br>
+
+  <br>
+  <!-- slick image slider -->
+
+  <!-- pricing -->
+  <div class="container" id="background_pricing_phone">
+
+  </div>
+  <div class="container" id="prices">
+    <div id="background_pricing_smallscreen">
+      <center>
+
+
+        <h3 class id="pricing_plans">
+          Pricing
+        </h3>
+
+
+        <br>
+        <!-- 
+        <p><b>Find the rental style that fits you best</b></p> -->
+      </center>
+
+      <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist" style="">
+        <li class="nav-item">
+          <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
+            aria-controls="pills-home" aria-selected="true">Standard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"
+            aria-controls="pills-profile" aria-selected="false">Premium</a>
+        </li>
+
+      </ul>
+    </div>
+    <div class="tab-content" id="pills-tabContent">
+
+      <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+        <center>
+          <div id='standard_price1'>Provides full access with the exception of premium
+            clothing. </div>
+        </center>
+        <div class="card-deck">
+          <div class="card">
+
+
+            <div class="card-body">
+
+              <center>
+                <div class="card-header" style="padding-bottom:0rem;padding-top:0rem;">
+                  <h5 id="explore1">Explore</h5>
+                  <h5 id="nsa1">No Strings Attached</h5>
+
+                </div>
+
+                <i> Great outfits, no commitment. Ideal for trips and special events.</i>
+
+                <br><br>
+                <form>
+
+                  <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+                  <h6 style=>
+                    Rent <big>1</big> time:</h6>
+                  <select class="form-control" name="price" id="nsa_s_select" onchange="nsa_s_selectfunc()">
+                    <option value="22">1 outfit/week</option>
+                    <option value="42">2 outfits/week</option>
+                    <option value="50">3 outfits/week </option>
+                    <option value="63">4 outfits/week </option>
+                    <option value="75">5 outfits/week </option>
+                  </select>
+                  <br>
+
+
+
+
+                  <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+                  <h6>
+
+                    <big><span id="nsa_s_p">€22</span></big>
+                  </h6>
+
+                  <br>
+
+                  1 delivery <br> flexible dates
+                  <br>
+                  <br>
+                  <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+                  <button type="button" class="btn btn-outline-dark" style="margin:0.5rem; width:7rem; color: black;"
+                    data-toggle="modal" data-target="#exampleModal">
+                    Early Access</button>
+                </form>
+
+
+
+              </center>
+            </div>
+          </div>
+
+
+
+
+          <!-- <div class="card">
+
+            <div class="card-body">
+              <center>
+                <div class="card-header" style="padding-bottom:0rem; padding-top:0rem;">
+                  <h5>Steal the show</h5>
+
+                </div>
+
+                <i>Always on the go? Rent more with this cost-saving subscription.</i>
+                <br><br>
+                <form>
+                  <h6>Rent <big>3</big> times:</h6>
+                  <select class="form-control" id="sts_s_select" onchange="sts_s_selectfunc()">
+
+                    <option value="58">
+                      <big>1</big> outfit/week
+                    </option>
+                    <option value="106">
+                      <big>2</big> outfit/week
+                    <option value="145">
+                      <big>3</big> outfits/week
+                    </option>
+                    <option value="175">
+                      <big>4</big> outfits/week
+                    </option>
+
+                  </select>
+                  <br>
+
+                  <h6><big><span id="sts_s_p">€58</span></big></h6>
+                  <br>
+
+                  3 deliveries
+                  <br>
+                  <span id="sts_s_t">3</span> outfits in total
+                  <br>
+
+
+                  <br>
+
+                  <button type="submit" class="btn btn-outline-dark" style="margin:0.5rem; width:7rem; color: black;">
+                    Early Access</button>
+
+              </center>
+            </div>
+          </div> -->
+
+
+          <div class="card">
+
+
+            <div class="card-body">
+              <center>
+                <div class="card-header" style="padding-bottom:0rem; padding-top:0rem;">
+                  <h5>Fashionasm</h5>
+                </div>
+                <i>The ultimate fashion experience: rent unlimited outfits <span id="fixprice">for a fixed
+                    price.</span></i>
+                <br><br>
+                <form>
+                  <h6>Rent Anytime:
+                  </h6>
+
+                  <select class="form-control" id="f_s_select" onchange="f_s_selectfunc()">
+
+
+                    <option value="68">
+                      3 outfits a time
+                    </option>
+                    <option value="83">
+                      4 outfits a time
+                    </option>
+                    <option value="93">
+                      5 outfits a time
+                    </option>
+
+                  </select>
+
+                  <br>
+
+
+                  <h6><big>
+                      <span id="f_s_p">€68</span>
+                    </big>/month</h6>
+                  <br>
+
+                  Unlimited deliveries<br>Swap anytime
+
+
+                  <br>
+                  <br>
+
+
+                  <button type="button" class="btn btn-outline-dark" style="margin:0.5rem; width:7rem; color: black;"
+                    data-toggle="modal" data-target="#exampleModal">
+                    Early Access</button>
+                </form>
+              </center>
+            </div>
+          </div>
+
+          <div class="card" style="border:none; background-color:transparent;" id="pc1">
+
+
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+        <center>
+          <div id="premium_price1">Provides access to our entire collection including all
+            designer-brands.
+          </div>
+        </center>
+        <div class="card-deck">
+          <div class="card">
+
+
+            <div class="card-body">
+
+              <center>
+                <div class="card-header" style="padding-bottom:0rem;padding-top:0rem;">
+                  <h5 id="explore2">Explore</h5>
+                  <h5 id="nsa2">No Strings Attached</h5>
+                </div>
+
+                <i>Great outfits, no commitment. Ideal for trips and special events.</i>
+                <br><br>
+
+
+                <form action="#" method="POST">
+
+
+
+                  <h6>Rent <big> 1</big> time:</h6>
+
+
+
+
+                  <select class="form-control" id="nsa_p_select" onchange="nsa_p_selectfunc()">
+                    <option value="45">1 outfit/a week</option>
+                    <option value="86">2 outfits/a week</option>
+                    <option value="115">3 outfits/a week </option>
+                    <option value="148">4 outfits/a week </option>
+                    <option value="178">5 outfits/a week </option>
+                    <!-- <option value="100">Rent 8 packages</option> -->
+                    <!-- <option value="100">Rent 10 times</option> -->
+                  </select>
+                  <br>
+
+
+
+                  <h6><big><span id="nsa_p_p">€45</span></big></h6>
+
+                  <br>
+
+
+                  1 delivery<br>flexible dates
+
+
+                  <br>
+                  <br>
+
+                  <button type="button" class="btn btn-outline-dark" style="margin:0.5rem; width:7rem; color: black;"
+                    data-toggle="modal" data-target="#exampleModal">
+                    Early Access</button>
+
+
+
+
+                </form>
+                <!-- <small class="text-muted">Extra days rent are
+                  available at an additional cost.</small> -->
+              </center>
+            </div>
+          </div>
+
+
+
+
+          <!-- <div class="card">
+
+            <div class="card-body">
+              <center>
+                <div class="card-header" style="padding-bottom:0rem;padding-top:0rem;">
+                  <h5>Steal the show</h5>
+                </div>
+
+                <i> Always on the go? Rent more with this cost-saving subscription.</i>
+                <br><br>
+
+
+                <form>
+                  <h6>Rent <big>3</big> times:</h6>
+                  <select class="form-control" id="sts_p_select" onchange="sts_p_selectfunc()">
+
+                    <option value="115">
+                      <big>1</big> outfit for a week
+                    </option>
+                    <option value="221">
+                      <big>2</big> outfits for a week
+                    <option value="318">
+                      <big>3</big> outfits for a week
+                    </option>
+
+
+                  </select>
+                  <br>
+
+                  <h6><big><span id="sts_p_p">€115</span></big></h6>
+                  <br>
+
+                  <big>3 </big>deliveries
+                  <br>
+                  <big><span id="sts_p_t">3</span> </big>outfits in total
+
+
+
+                  <br>
+                  <br>
+                  <button type="submit" class="btn btn-outline-dark" style="margin:0.5rem; width:7rem; color: black;">
+                    Early Access</button>
+                  <br>
+                  <br>
+
+                </form>
+               <small class="text-muted">Extra days rent are
+                  available at an additional cost. </small> -->
+          </center>
+          <!-- </div>
+      </div>  -->
+
+
+          <div class="card">
+
+
+            <div class="card-body">
+              <center>
+                <div class="card-header" style="padding-bottom:0rem;padding-top:0rem;">
+                  <h5>Fashionasm</h5>
+                </div>
+
+                <i> The ultimate fashion experience: rent unlimited outfits <span id="fixprice2">for a fixed
+                    price.</span></i>
+                <br>
+                <br>
+                <form>
+                  <h6>Rent Anytime:
+                  </h6>
+                  <select class="form-control" id="f_p_select" onchange="f_p_selectfunc()">
+
+
+                    <option value="138">
+                      3 outfits a time
+                    </option>
+                    <option value="179">
+                      4 outfits a time
+                    </option>
+
+                  </select>
+                  <br>
+
+
+                  <h6> <big><span id="f_p_p">€138</span></big>/month</h6>
+                  <br>
+
+                  Unlimited deliveries<br>Swap anytime!
+
+
+                  <br>
+
+                  <br>
+
+                  <button type="button" class="btn btn-outline-dark" style="margin:0.5rem; width:7rem; color: black;"
+                    data-toggle="modal" data-target="#exampleModal">
+                    Early Access</button>
+
+
+                </form>
+
+              </center>
+            </div>
+          </div>
+
+
+          <div class="card" style="border:none; background-color:transparent;" id="pc2">
+
+
+          </div>
+
+
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container" id="plans2">
+    <div id="background_pricing_smallscreen">
+      <center>
+        <h3 class id="pricing_plans2">
+          Pricing
+        </h3>
+        <!-- 
+        <p><b>Find the rental style that fits you best</b></p> -->
+      </center>
+
+      <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist" style="">
+        <li class="nav-item">
+          <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
+            aria-controls="pills-home" aria-selected="true">Standard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"
+            aria-controls="pills-profile" aria-selected="false">Premium</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="tab-content" id="pills-tabContent">
+
+      <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+        <center>
+          <div id='standard_price2'>Provides full access with the exception of premium clothing. </div>
+        </center>
+        <div class="card-deck d-flex flex-column">
+          <div class="card">
+
+
+            <div class="card-body">
+
+              <center>
+                <div class="card-header" style="padding-bottom:0rem;padding-top:0rem;">
+                  <h5>No Strings Attached</h5>
+
+                </div>
+
+                <i> Great outfits, no commitment. Ideal for trips and special events.</i>
+
+                <br><br>
+                <form action="#" method="POST">
+
+                  <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+                  <h6 style=>
+                    Rent <big>1</big> time:</h6>
+                  <select class="form-control" name="price" id="nsa_s_select" onchange="nsa_s_selectfunc()">
+                    <option value="22">1 outfit/week</option>
+                    <option value="42">2 outfits/week</option>
+                    <option value="50">3 outfits/week </option>
+                    <option value="63">4 outfits/ week </option>
+                    <option value="75">5 outfits/week </option>
+                  </select>
+                  <br>
+
+
+
+
+                  <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+                  <h6>
+
+                    <big><span id="nsa_s_p">€22</span></big>
+                  </h6><br>
+
+                  1 delivery <br> flexible dates
+                  <br>
+                  <br>
+                  <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+                  <button type="button" class="btn btn-outline-dark" style="margin:0.5rem; width:7rem; color: black;"
+                    data-toggle="modal" data-target="#exampleModal">
+                    Early Access</button>
+
+
+                </form>
+
+              </center>
+            </div>
+          </div>
+
+
+
+
+          <!-- <div class="card">
+
+            <div class="card-body">
+              <center>
+                <div class="card-header" style="padding-bottom:0rem; padding-top:0rem;">
+                  <h5>Steal the show</h5>
+
+                </div>
+
+                <i>Always on the go? Rent more with this cost-saving subscription.</i>
+                <br><br>
+                <form>
+                  <h6>Rent <big>3</big> times:</h6>
+                  <select class="form-control" id="sts_s_select" onchange="sts_s_selectfunc()">
+
+                    <option value="58">
+                      <big>1</big> outfit/week
+                    </option>
+                    <option value="106">
+                      <big>2</big> outfit/week
+                    <option value="145">
+                      <big>3</big> outfits/week
+                    </option>
+                    <option value="175">
+                      <big>4</big> outfits/week
+                    </option>
+
+                  </select>
+                  <br>
+
+                  <h6><big><span id="sts_s_p">€58</span></big></h6>
+                  <br>
+
+                  3 deliveries
+                  <br>
+                  <span id="sts_s_t">3</span> outfits in total
+                  <br>
+
+
+                  <br>
+
+                  <button type="submit" class="btn btn-outline-dark" style="margin:0.5rem; width:7rem; color: black;">
+                    Early Access</button>
+
+              </center>
+            </div>
+          </div> -->
+
+
+          <div class="card">
+
+
+            <div class="card-body">
+              <center>
+                <div class="card-header" style="padding-bottom:0rem; padding-top:0rem;">
+                  <h5>Fashionasm</h5>
+                </div>
+                <i>The ultimate fashion experience: rent unlimited outfits for a fixed price.</i>
+                <br><br>
+                <form>
+                  <h6>Rent Anytime:
+                  </h6>
+
+                  <select class="form-control" id="f_s_select" onchange="f_s_selectfunc()">
+
+
+                    <option value="68">
+                      3 outfits a time
+                    </option>
+                    <option value="83">
+                      4 outfits a time
+                    </option>
+                    <option value="93">
+                      5 outfits a time
+                    </option>
+
+                  </select>
+
+                  <br>
+
+
+                  <h6><big>
+                      <span id="f_s_p">€68</span>
+                    </big>/month</h6>
+                  <br>
+
+                  Unlimited deliveries<br>Swap anytime
+
+
+                  <br>
+
+                  <br>
+
+                  <button type="button" class="btn btn-outline-dark" style="margin:0.5rem; width:7rem; color: black;"
+                    data-toggle="modal" data-target="#exampleModal">
+                    Early Access</button>
+
+              </center>
+            </div>
+          </div>
+
+          <div class="card" style="border:none; background-color:transparent;" id="pc1">
+
+
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+        <center>
+          <div id="premium_price2">Provides access to our entire collection including all
+            designer-brands.
+          </div>
+        </center>
+        <div class="card-deck">
+          <div class="card">
+
+
+            <div class="card-body">
+
+              <center>
+                <div class="card-header" style="padding-bottom:0rem;padding-top:0rem;">
+                  <h5>No Strings Attached </h5>
+
+                </div>
+
+                <i>Great outfits, no commitment. Ideal for trips and special events.</i>
+                <br><br>
+
+
+                <form action="#" method="POST">
+
+
+
+                  <h6>Rent <big> 1</big> time:</h6>
+
+
+
+
+                  <select class="form-control" id="nsa_p_select" onchange="nsa_p_selectfunc()">
+                    <option value="45">1 outfit/a week</option>
+                    <option value="86">2 outfits/a week</option>
+                    <option value="115">3 outfits/a week </option>
+                    <option value="150">4 outfits/a week </option>
+                    <option value="178">5 outfits/a week </option>
+                    <!-- <option value="100">Rent 8 packages</option> -->
+                    <!-- <option value="100">Rent 10 times</option> -->
+                  </select>
+                  <br>
+
+
+
+                  <h6><big><span id="nsa_p_p">€45</span></big></h6>
+
+                  <br>
+
+
+                  1 delivery<br>flexible dates
+
+
+                  <!-- <big>1</big> outfit<br>
+                                            <big>7 </big> days rent</h6> -->
+                  <!-- <h6>Includes 7 days rent</h6> -->
+
+                  <br>
+                  <br>
+
+                  <button type="button" class="btn btn-outline-dark" style="margin:0.5rem; width:7rem; color: black;"
+                    data-toggle="modal" data-target="#exampleModal">
+                    Early Access</button>
+
+
+
+
+                </form>
+                <!-- <small class="text-muted">Extra days rent are
+                  available at an additional cost.</small> -->
+              </center>
+            </div>
+          </div>
+
+
+
+
+          <!-- <div class="card">
+
+            <div class="card-body">
+              <center>
+                <div class="card-header" style="padding-bottom:0rem;padding-top:0rem;">
+                  <h5>Steal the show</h5>
+                </div>
+
+                <i> Always on the go? Rent more with this cost-saving subscription.</i>
+                <br><br>
+
+
+                <form>
+                  <h6>Rent <big>3</big> times:</h6>
+                  <select class="form-control" id="sts_p_select" onchange="sts_p_selectfunc()">
+
+                    <option value="115">
+                      <big>1</big> outfit for a week
+                    </option>
+                    <option value="221">
+                      <big>2</big> outfits for a week
+                    <option value="318">
+                      <big>3</big> outfits for a week
+                    </option>
+
+
+                  </select>
+                  <br>
+
+                  <h6><big><span id="sts_p_p">€115</span></big></h6>
+                  <br>
+
+                  <big>3 </big>deliveries
+                  <br>
+                  <big><span id="sts_p_t">3</span> </big>outfits in total
+
+
+
+                  <br>
+                  <br>
+                  <button type="submit" class="btn btn-outline-dark" style="margin:0.5rem; width:7rem; color: black;">
+                    Early Access</button>
+                  <br>
+                  <br>
+
+                </form> -->
+          <!-- <small class="text-muted">Extra days rent are
+                  available at an additional cost. </small> -->
+          <!-- </center>
+            </div>
+          </div> -->
+
+
+          <div class="card">
+
+
+            <div class="card-body">
+              <center>
+                <div class="card-header" style="padding-bottom:0rem;padding-top:0rem;">
+                  <h5>Fashionasm</h5>
+                </div>
+
+                <i> The ultimate fashion experience: rent unlimited outfits for a fixed price.</i>
+                <br>
+                <br>
+                <form>
+                  <h6>Rent Anytime:
+                  </h6>
+                  <select class="form-control" id="f_p_select" onchange="f_p_selectfunc()">
+
+
+                    <option value="138">
+                      3 outfits a time
+                    </option>
+                    <option value="179">
+                      4 outfits a time
+                    </option>
+
+                  </select>
+                  <br>
+
+
+                  <h6> <big><span id="f_p_p">€138</span></big>/month</h6>
+                  <br>
+
+                  Unlimited deliveries<br>Swap anytime!
+
+
+                  <br>
+                  <br>
+
+                  <button type="button" class="btn btn-outline-dark" style="margin:0.5rem; width:7rem; color: black;"
+                    data-toggle="modal" data-target="#exampleModal">
+                    Early Access</button>
+
+
+                </form>
+
+              </center>
+            </div>
+          </div>
+
+
+          <div class="card" style="border:none; background-color:transparent;" id="pc2">
+
+
+          </div>
+
+
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- pricing -->
+
+
+
+  <br>
+
+  <!-- benefits section -->
+
+  <div id="include" class="container">
+    <center>
+      <h3>
+        For the <i class="fas fa-heart" style="font-size:1.5rem;"></i> of fashion
+      </h3>
+    </center>
+    <div class="include-photo">
+      <div class="form-container">
+        <div class="image-holder1"> <video autoplay loop muted height="500rem">
+            <source src="https://rentista.s3.us-east-2.amazonaws.com/rentista_zakelijk3.mp4" type="video/mp4">
+            <source src="https://rentista.s3.us-east-2.amazonaws.com/rentista_zakelijk3.mp4" type="video/ogg" />
+            Your browser does not support the video tag.</video></div>
+        <div class="image-holder2"> <video autoplay loop muted height="400rem">
+            <source src="https://rentista.s3.us-east-2.amazonaws.com/rentista_zakelijk3.mp4" type="video/mp4">
+            <source src="https://rentista.s3.us-east-2.amazonaws.com/rentista_zakelijk3.mp4" type="video/ogg" />
+            Your browser does not support the video tag.</video></div>
+        <div class="image-holder3"> <video autoplay loop muted height="300rem">
+            <source src="https://rentista.s3.us-east-2.amazonaws.com/rentista_zakelijk3.mp4" type="video/mp4">
+            <source src="https://rentista.s3.us-east-2.amazonaws.com/rentista_zakelijk3.mp4" type="video/ogg" />
+            Your browser does not support the video tag.</video></div>
+        <div id="body">
+          <span><img src="https://rentista.s3.us-east-2.amazonaws.com/sustain.png">
+            <p>Reduce your carbon footprint</p>
+          </span>
+          <span>
+            <img src="https://rentista.s3.us-east-2.amazonaws.com/free-delivery.png">
+            <p>Benefit from free shipping both ways</p>
+          </span>
+          <span>
+            <img src="https://rentista.s3.us-east-2.amazonaws.com/cocktail.png">
+            <p>Plenty of outfits for every occasion
+            </p>
+          </span>
+          <span>
+            <img src="https://rentista.s3.us-east-2.amazonaws.com/21-512.png">
+            <p> Dry-cleaning is complimentary</p>
+          </span>
+          <span>
+            <img src="https://rentista.s3.us-east-2.amazonaws.com/money.png">
+            <p>Upgrade your style without overspending</p>
+          </span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <center>
+    <h3 id="touch">Get in Touch</h3>
+  </center>
+  <!-- <br> -->
+  <div id="foot_background">
+    <div class="container" id="foot">
+      <div class="newsletter-subscribe">
+        <div class="container">
+          <div class="intro">
+            <!-- <h3 class="text-center">Subscribe</h3> -->
+            <p class="text-center">Subscribe and receive 20% discount on your first rental </p>
+          </div>
+          <form class="form-inline" action="{{ url_for('emails.new') }}" method="post">
+            <div class="form-group"> <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+              <input class="form-control" type="email" name="email" placeholder="Your Email">
+            </div>
+            <div class="form-group"><button type="submit" class="btn btn-light"
+                style="margin:0.5rem; width:7rem; padding-left: unset;padding-right:unset;"> Subscribe
+              </button></div>
+          </form>
+        </div>
+      </div>
+
+      <br>
+      <br>
+
+      <div class=" footer-basic">
+
+
+        <div style="color: #4b4c4d;
+      text-align: center;
+      font-size: 18px;
+      line-height: 1.6;
+   
+         padding-top: 0rem;
+         margin-top:0rem;
+    
+         opacity:0.8;">
+
+          info@rentista.co
+        </div>
+        <div class="social">
+          <a href="#"><i class="fab fa-facebook"></i>
+          </a><a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        <!-- 
+      <ul class="list-inline">
+        <li class="list-inline-item"><a href="#">Home</a></li>
+        <li class="list-inline-item"><a href="#">Info</a></li>
+        <li class="list-inline-item"><a href="#">Prices</a></li>
+
+
+      </ul>
+ -->
+
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+
+        <div class="modal-body">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <div class="register-photo">
+            <div class="form-container">
+              <div class="image-holder"></div>
+              <form method="post" action="{{ url_for('landings.new') }}">
+                <h2 class="text-center"><strong>Register</strong> for early access.</h2>
+                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+                <input type="hidden" type="text" name="subscription" value="default">
+                <input type="hidden" type="text" name="payment" value="default">
+
+                <div class="form-group"> <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" /><input
+                    class="form-control" type="email" name="email" placeholder="Email">
+                </div>
+                <div class="form-group"> <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" /><input
+                    class="form-control" type="text" name="name" placeholder="Name">
+                </div>
+                <div class="form-group"> <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" /><input
+                    class="form-control" type="text" name="size" placeholder="Apparel Size">
+                </div>
+                <h5>We will be in touch soon.</h5>
+                <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Sign Up</button></div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> -->
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script>
+
+    $('.phone').slick({
+      arrows: true,
+      infinite: true,
+      speed: 300,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      prevArrow: '.arrow_pre',
+      nextArrow: '.arrow_nex'
+    });
+
+    $('.ipro').slick({
+      infinite: true,
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      prevArrow: '.arrow_prev1',
+      nextArrow: '.arrow_next1'
+    });
+
+    $('.computer').slick({
+      infinite: true,
+      speed: 300,
+      slidesToShow: 4,
+      slidesToScroll: 4,
+      prevArrow: '.arrow_prev',
+      nextArrow: '.arrow_next'
+    });
+
+    $('.ipad').slick({
+      infinite: true,
+      slidesToShow: 2,
+      slidesToScroll: 2,
+      prevArrow: '.arrow_prev2',
+      nextArrow: '.arrow_next2'
+    });
+
+
+
+  </script>
+
+  <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script> -->
+
+  <script>
+    // navbar_transition
+    $(window).ready(function () {
+      if ($(this).scrollTop() > 500) {
+        $('nav').addClass('scrolled');
+      }
+      $(window).scroll(function () {
+        $('nav').toggleClass('scrolled', $(this).scrollTop() > 100);
+
+      });
+    });
+    // window.onscroll = function () { myFunction() };
+
+    // function myFunction() {
+    //   if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+
+    //   }
+    //   else {
+    //   };
+
+    // }
+
+    // navbar_transition
+  </script>
+
+</body>
+
+
+{% endblock %}
